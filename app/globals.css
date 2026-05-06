@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1a1a2e;
+  font-family: var(--font-sans, Inter, ui-sans-serif, system-ui, sans-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading, "Playfair Display", Georgia, ui-serif, serif);
+}
+
+::selection {
+  background: rgba(181, 160, 95, 0.18);
+  color: inherit;
+}
+
+/* Artículos del blog */
+.prose-article {
+  color: #222;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+.prose-article h2 {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #192A4D;
+  margin: 2.2em 0 0.6em;
+}
+.prose-article h3 {
+  font-family: var(--font-heading, "Playfair Display", Georgia, serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #192A4D;
+  margin: 1.8em 0 0.5em;
+}
+.prose-article p {
+  margin-bottom: 1.5em;
+}
+.prose-article ul,
+.prose-article ol {
+  padding-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+.prose-article li {
+  margin-bottom: 0.5em;
+}
+.prose-article blockquote {
+  border-left: 3px solid #B5A05F;
+  padding: 0.3em 0 0.3em 1.2em;
+  margin: 1.8em 0;
+  font-style: italic;
+  color: #555;
+}
+.prose-article strong {
+  font-weight: 700;
+  color: #192A4D;
+}
