@@ -22,12 +22,20 @@ export default function HomePage() {
           <p className="mt-8 text-base leading-7 text-white/70 max-w-lg mx-auto">
             Asesoría legal con rigor, experiencia y cercanía para personas y empresas de la Región del Maule.
           </p>
-          <a
-            href="#areas"
-            className="mt-10 inline-block border border-white/30 px-8 py-3 text-xs uppercase tracking-[0.3em] text-white/80 hover:border-[#B5A05F] hover:text-[#B5A05F] transition-colors"
-          >
-            Áreas de práctica
-          </a>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#contacto"
+              className="bg-[#B5A05F] px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#192A4D] font-semibold hover:bg-[#c9b472] transition-colors"
+            >
+              Primera consulta
+            </a>
+            <a
+              href="#areas"
+              className="border border-white/30 px-8 py-3 text-xs uppercase tracking-[0.3em] text-white/80 hover:border-[#B5A05F] hover:text-[#B5A05F] transition-colors"
+            >
+              Áreas de práctica
+            </a>
+          </div>
         </div>
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
           <svg className="w-5 h-5 text-white/30 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -205,11 +213,11 @@ export default function HomePage() {
       </section>
 
       {/* CONTACTO */}
-      <section id="contacto" className="bg-[#192A4D] px-6 py-24">
-        <div className="mx-auto max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Contacto</p>
-          <h2 className="font-heading mt-3 text-3xl font-semibold text-white">Primera consulta</h2>
-          <div className="mt-px mb-10 h-0.5 w-12 bg-[#B5A05F]" />
+      <section id="contacto" className="group bg-[#192A4D] px-6 py-24 transition-colors duration-700 hover:bg-[#1e3460]">
+        <div className="mx-auto max-w-3xl bg-white p-10 border-l-2 border-transparent group-hover:border-[#B5A05F] group-hover:pl-14 transition-all duration-500">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#8a7640]">Contacto</p>
+          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Primera consulta</h2>
+          <div className="mt-px mb-10 h-0.5 w-12 bg-[#B5A05F] group-hover:w-24 transition-all duration-500" />
 
           <ContactForm />
         </div>

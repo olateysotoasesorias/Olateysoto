@@ -23,33 +23,33 @@ export default function ContactForm() {
   return (
     <form ref={formRef} action={handleSubmit} className="grid gap-5 sm:grid-cols-2">
       <label className="block">
-        <span className="text-xs uppercase tracking-[0.15em] text-white/50">Nombre completo</span>
+        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Nombre completo</span>
         <input
           name="name"
           type="text"
           placeholder="Sofía Pérez"
           required
-          className="mt-2 w-full border-b border-white/20 bg-transparent py-3 text-sm text-white placeholder-white/30 outline-none focus:border-[#B5A05F] transition-colors"
+          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none focus:border-[#B5A05F] transition-colors"
         />
       </label>
       <label className="block">
-        <span className="text-xs uppercase tracking-[0.15em] text-white/50">Correo electrónico</span>
+        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Correo electrónico</span>
         <input
           name="email"
           type="email"
           placeholder="correo@ejemplo.com"
           required
-          className="mt-2 w-full border-b border-white/20 bg-transparent py-3 text-sm text-white placeholder-white/30 outline-none focus:border-[#B5A05F] transition-colors"
+          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none focus:border-[#B5A05F] transition-colors"
         />
       </label>
       <label className="block sm:col-span-2">
-        <span className="text-xs uppercase tracking-[0.15em] text-white/50">Mensaje</span>
+        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Mensaje</span>
         <textarea
           name="message"
           rows={4}
           placeholder="Cuéntanos brevemente tu caso..."
           required
-          className="mt-2 w-full border-b border-white/20 bg-transparent py-3 text-sm text-white placeholder-white/30 outline-none focus:border-[#B5A05F] transition-colors resize-none"
+          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none focus:border-[#B5A05F] transition-colors resize-none"
         />
       </label>
 

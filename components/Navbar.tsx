@@ -9,7 +9,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="/#inicio" className="flex items-center gap-3">
+
+        {/* Left: wordmark */}
+        <a href="/#inicio" className="font-heading text-lg font-semibold tracking-wide text-[#192A4D] leading-none w-1/3">
+          Olate <span className="text-[#B5A05F]">&</span> Soto
+        </a>
+
+        {/* Center: logo */}
+        <a href="/#inicio" className="hidden md:block">
           <Image
             src="/logo.png"
             alt="Olate & Soto"
@@ -17,14 +24,10 @@ export default function Navbar() {
             height={44}
             className="object-contain"
           />
-          <span className="w-px h-8 bg-gray-200" />
-          <span className="font-heading text-lg font-semibold tracking-wide text-[#192A4D] leading-none">
-            Olate <span className="text-[#B5A05F]">&</span> Soto
-          </span>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-[#4a4a4a]">
+        {/* Right: nav */}
+        <nav className="hidden md:flex items-center justify-end gap-8 text-sm font-medium text-[#4a4a4a] w-1/3">
           <a href="/#areas" className="hover:text-[#192A4D] transition-colors">Áreas</a>
           <a href="/#equipo" className="hover:text-[#192A4D] transition-colors">Equipo</a>
           <a href="/#recursos" className="hover:text-[#192A4D] transition-colors">Recursos</a>
