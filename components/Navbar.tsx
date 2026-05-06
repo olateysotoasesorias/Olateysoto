@@ -28,9 +28,9 @@ export default function Navbar() {
 
         {/* Right: nav */}
         <nav className="hidden md:flex items-center justify-end gap-8 text-sm font-medium text-[#4a4a4a] w-1/3">
-          <a href="/#areas" className="hover:text-[#192A4D] transition-colors">Áreas</a>
-          <a href="/#equipo" className="hover:text-[#192A4D] transition-colors">Equipo</a>
-          <a href="/#recursos" className="hover:text-[#192A4D] transition-colors">Recursos</a>
+          <a href="/#equipo" className="hover:text-[#192A4D] transition-colors">La Firma</a>
+          <a href="/#areas" className="hover:text-[#192A4D] transition-colors">Asesorías</a>
+          <a href="/#academia" className="hover:text-[#192A4D] transition-colors">Academia</a>
           <a href="/#contacto" className="hover:text-[#192A4D] transition-colors">Contacto</a>
         </nav>
 
@@ -52,9 +52,9 @@ export default function Navbar() {
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4 text-sm font-medium text-[#4a4a4a]">
-          <a href="/#areas" onClick={() => setOpen(false)}>Áreas</a>
-          <a href="/#equipo" onClick={() => setOpen(false)}>Equipo</a>
-          <a href="/#recursos" onClick={() => setOpen(false)}>Recursos</a>
+          <a href="/#equipo" onClick={() => setOpen(false)}>La Firma</a>
+          <a href="/#areas" onClick={() => setOpen(false)}>Asesorías</a>
+          <a href="/#academia" onClick={() => setOpen(false)}>Academia</a>
           <a href="/#contacto" onClick={() => setOpen(false)}>Contacto</a>
         </div>
       )}

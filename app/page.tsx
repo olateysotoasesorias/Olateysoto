@@ -27,13 +27,13 @@ export default function HomePage() {
               href="#contacto"
               className="bg-[#B5A05F] px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#192A4D] font-semibold hover:bg-[#c9b472] transition-colors"
             >
-              Primera consulta
+              Solicitar asesoría
             </a>
             <a
-              href="#areas"
+              href="#academia"
               className="border border-white/30 px-8 py-3 text-xs uppercase tracking-[0.3em] text-white/80 hover:border-[#B5A05F] hover:text-[#B5A05F] transition-colors"
             >
-              Áreas de práctica
+              Explorar academia
             </a>
           </div>
         </div>
@@ -43,61 +43,6 @@ export default function HomePage() {
           </svg>
         </div>
       </HeroCarousel>
-
-      {/* PILARES */}
-      <section className="bg-[#f7f6f3] px-6 py-20">
-        <div className="mx-auto max-w-5xl grid grid-cols-2 gap-px bg-gray-200 md:grid-cols-4">
-          {[
-            { titulo: 'Excelencia', desc: 'Formación jurídica de alto nivel aplicada a cada caso.' },
-            { titulo: 'Confianza', desc: 'Estándares éticos que guían cada asesoría.' },
-            { titulo: 'Cercanía', desc: 'Trato directo, claro y humano con nuestros clientes.' },
-            { titulo: 'Resultados', desc: 'Enfoque estratégico orientado a soluciones concretas.' },
-          ].map((p) => (
-            <div key={p.titulo} className="bg-white px-8 py-10">
-              <div className="mb-4 h-0.5 w-8 bg-[#B5A05F]" />
-              <h3 className="font-heading text-lg font-semibold text-[#192A4D]">{p.titulo}</h3>
-              <p className="mt-3 text-sm leading-6 text-gray-500">{p.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ÁREAS */}
-      <section id="areas" className="px-6 py-24">
-        <div className="mx-auto max-w-5xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Especialidades</p>
-          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Áreas de práctica</h2>
-          <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
-
-          <div className="grid gap-8 md:grid-cols-2">
-            {[
-              {
-                area: 'Derecho de Familia',
-                desc: 'Asesoría empática y profesional en divorcios, pensiones de alimentos, cuidado personal y mediación. Acompañamos a las familias con claridad y metas de protección duradera.',
-                items: ['Divorcios y separaciones', 'Pensiones de alimentos', 'Cuidado personal y tuición', 'Mediación familiar'],
-              },
-              {
-                area: 'Asesoría Pyme, Tributaria y Civil',
-                desc: 'Consultoría estratégica para empresas que buscan minimizar riesgos y fortalecer su posición legal. Redacción de contratos, cobranza judicial y constitución de sociedades.',
-                items: ['Redacción de contratos', 'Constitución de sociedades', 'Cobranza judicial', 'Protección al consumidor'],
-              },
-            ].map((a) => (
-              <div key={a.area} className="border border-gray-100 p-8 hover:border-[#B5A05F]/40 transition-colors">
-                <h3 className="font-heading text-xl font-semibold text-[#192A4D]">{a.area}</h3>
-                <p className="mt-4 text-sm leading-7 text-gray-500">{a.desc}</p>
-                <ul className="mt-6 space-y-2">
-                  {a.items.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-gray-600">
-                      <span className="h-px w-4 bg-[#B5A05F] flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* EQUIPO */}
       <section id="equipo" className="bg-[#f7f6f3] px-6 py-24">
@@ -113,7 +58,7 @@ export default function HomePage() {
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
                 <Image
                   src="/equipo/olate.jpg"
-                  alt="Johnny Olate, asesor jurídico"
+                  alt="Johnny Olate, asesor jurídico y egresado de derecho en Talca"
                   fill
                   className="object-cover object-top"
                 />
@@ -145,7 +90,7 @@ export default function HomePage() {
               </div>
               <p className="mt-0.5 text-xs uppercase tracking-[0.2em] text-[#B5A05F]">Socio Fundador</p>
               <div className="mt-3 h-px w-8 bg-[#B5A05F]" />
-              <p className="mt-4 text-sm leading-7 text-gray-500">
+              <p className="mt-4 text-sm leading-7 text-gray-500 text-justify">
                 Asesor jurídico y director del área civil y comercial. Estudió Derecho en la Pontificia Universidad Católica de Chile y actualmente es egresado por la Universidad de Talca. Cuenta con una sólida trayectoria práctica en la tramitación de causas y la asesoría estratégica a personas, pequeñas y medianas empresas. Su práctica se caracteriza por el rigor técnico, la eficiencia procesal y la aplicación de LegalTech para optimizar la gestión legal. Se enfoca en la redacción de contratos, estructuración de sociedades y litigación civil, aportando una visión resolutiva orientada a la protección del patrimonio de sus clientes.
               </p>
             </div>
@@ -155,7 +100,7 @@ export default function HomePage() {
               <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-100 mb-6">
                 <Image
                   src="/equipo/soto.png"
-                  alt="Constanza Soto, asesora jurídica"
+                  alt="Constanza Soto, asesora jurídica y egresada de derecho en Talca"
                   fill
                   className="object-cover object-top"
                 />
@@ -176,7 +121,7 @@ export default function HomePage() {
               </div>
               <p className="mt-0.5 text-xs uppercase tracking-[0.2em] text-[#B5A05F]">Socia Fundadora</p>
               <div className="mt-3 h-px w-8 bg-[#B5A05F]" />
-              <p className="mt-4 text-sm leading-7 text-gray-500">
+              <p className="mt-4 text-sm leading-7 text-gray-500 text-justify">
                 Asesora jurídica y directora del área de familia. Egresada en Derecho por la Universidad de Talca. Con marcada vocación por la resolución de conflictos, centra su práctica en brindar un acompañamiento legal riguroso y profundamente humano. Su especialización comprende procesos complejos de divorcio, pensiones de alimentos, cuidado personal y medidas de protección. Destaca por su capacidad para comunicar escenarios jurídicos con claridad y empatía, priorizando la estabilidad emocional de sus representados y el interés superior de la infancia.
               </p>
             </div>
@@ -185,29 +130,109 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* RECURSOS */}
-      <section id="recursos" className="px-6 py-24">
+      {/* ÁREAS */}
+      <section id="areas" className="px-6 py-24">
         <div className="mx-auto max-w-5xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Recursos digitales</p>
-          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Herramientas para su caso</h2>
+          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Especialidades</p>
+          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Áreas de práctica</h2>
+          <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
+
+          <div className="grid gap-8 md:grid-cols-2">
+            {[
+              {
+                area: 'Derecho de Familia',
+                desc: 'Asesoría empática y profesional en divorcios, pensiones de alimentos, cuidado personal y mediación. Acompañamos a las familias con claridad y metas de protección duradera.',
+                items: ['Divorcios y separaciones', 'Pensiones de alimentos', 'Cuidado personal y tuición', 'Mediación familiar'],
+              },
+              {
+                area: 'Asesoría Pyme, Tributaria y Civil',
+                desc: 'Consultoría estratégica para empresas que buscan minimizar riesgos y fortalecer su posición legal. Redacción de contratos, cobranza judicial y constitución de sociedades.',
+                items: ['Redacción de contratos', 'Constitución de sociedades', 'Cobranza judicial', 'Protección al consumidor'],
+              },
+            ].map((a) => (
+              <div key={a.area} className="border border-gray-100 p-8 hover:border-[#B5A05F]/40 transition-colors">
+                <h3 className="font-heading text-xl font-semibold text-[#192A4D]">{a.area}</h3>
+                <p className="mt-4 text-sm leading-7 text-gray-500 text-justify">{a.desc}</p>
+                <ul className="mt-6 space-y-2">
+                  {a.items.map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-sm text-gray-600">
+                      <span className="h-px w-4 bg-[#B5A05F] flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ACADEMIA */}
+      <section id="academia" className="bg-[#f7f6f3] px-6 py-24">
+        <div className="mx-auto max-w-5xl">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Conocimiento jurídico</p>
+          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Academia</h2>
           <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="border border-gray-100 p-8 hover:border-[#B5A05F]/40 transition-colors">
-              <span className="text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">Guía gratuita</span>
-              <h3 className="font-heading mt-4 text-lg font-semibold text-[#192A4D]">
-                Kit para el divorcio
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-gray-500">
-                Los pasos esenciales, documentación necesaria y derechos que debe conocer antes de iniciar un proceso de divorcio en Chile.
-              </p>
-              <a href="#contacto" className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#192A4D] font-medium hover:text-[#B5A05F] transition-colors">
-                Solicitar <span>→</span>
+            {[
+              {
+                num: '01',
+                cat: 'Estoicismo jurídico',
+                mins: '6 min',
+                titulo: 'Marco Aurelio y la justicia del caso concreto',
+                desc: 'Cómo la filosofía estoica moldea una práctica legal orientada al bien común, más allá del formalismo procesal.',
+                href: '/johnnyolate/marco-aurelio-y-la-justicia',
+              },
+              {
+                num: '02',
+                cat: 'Análisis jurídico',
+                mins: '8 min',
+                titulo: 'El principio de proporcionalidad en el derecho',
+                desc: 'Una revisión crítica de cómo los tribunales ponderan derechos en conflicto y qué significa para su caso.',
+                href: '/johnnyolate/principio-de-proporcionalidad',
+              },
+              {
+                num: '03',
+                cat: 'Historia del derecho',
+                mins: '5 min',
+                titulo: 'Las Doce Tablas: fundamento del derecho moderno',
+                desc: 'El origen de la codificación legal y su influencia directa en el sistema jurídico chileno contemporáneo.',
+                href: '/johnnyolate/las-doce-tablas',
+              },
+            ].map((art) => (
+              <a
+                key={art.num}
+                href={art.href}
+                className="group/card relative bg-white p-8 flex flex-col hover:shadow-md transition-shadow"
+              >
+                <span className="absolute top-6 right-6 font-heading text-5xl font-semibold text-[#B5A05F]/10 group-hover/card:text-[#B5A05F]/20 transition-colors select-none">
+                  {art.num}
+                </span>
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">{art.cat}</span>
+                  <span className="text-gray-200">·</span>
+                  <span className="text-xs text-gray-400">{art.mins}</span>
+                </div>
+                <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug mb-3">
+                  {art.titulo}
+                </h3>
+                <p className="text-sm leading-6 text-gray-500 flex-1">{art.desc}</p>
+                <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#192A4D]/40 group-hover/card:text-[#B5A05F] transition-colors font-medium">
+                  <span>Leer artículo</span>
+                  <span>→</span>
+                </div>
               </a>
-            </div>
-            <div className="border border-dashed border-gray-200 p-8 flex items-center justify-center">
-              <p className="text-sm text-gray-300 text-center">Próximamente más recursos</p>
-            </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="/johnnyolate"
+              className="inline-block border border-[#192A4D]/20 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#192A4D]/60 hover:border-[#B5A05F] hover:text-[#B5A05F] transition-colors"
+            >
+              Ver todos los artículos
+            </a>
           </div>
         </div>
       </section>
@@ -231,7 +256,7 @@ export default function HomePage() {
           </span>
           <p className="text-xs text-white/30">© {new Date().getFullYear()} Olate & Soto Asesores Jurídicos · Talca, Chile</p>
           <a href="/johnnyolate" className="text-xs text-[#B5A05F]/60 hover:text-[#B5A05F] transition-colors uppercase tracking-widest">
-            Blog
+            Academia
           </a>
         </div>
       </footer>

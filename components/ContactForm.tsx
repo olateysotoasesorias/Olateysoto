@@ -59,7 +59,7 @@ export default function ContactForm() {
           disabled={status === 'sending' || status === 'ok'}
           className="w-fit border border-[#B5A05F] px-10 py-3 text-xs uppercase tracking-[0.25em] text-[#B5A05F] hover:bg-[#B5A05F] hover:text-[#192A4D] transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {status === 'sending' ? 'Enviando...' : 'Enviar consulta'}
+          {status === 'sending' ? 'Enviando...' : 'Solicitar evaluación'}
         </button>
 
         {status === 'ok' && (
