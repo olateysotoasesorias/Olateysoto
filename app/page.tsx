@@ -1,17 +1,13 @@
 import Image from 'next/image'
 import ContactForm from '../components/ContactForm'
+import HeroCarousel from '../components/HeroCarousel'
 
 export default function HomePage() {
   return (
     <main className="bg-white text-[#1a1a2e]">
 
       {/* HERO */}
-      <section
-        id="inicio"
-        className="relative flex min-h-screen flex-col items-center justify-center"
-        style={{ backgroundImage: "url('/hero.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-      >
-        <div className="absolute inset-0 bg-[#192A4D]/80" />
+      <HeroCarousel>
         <div className="relative z-10 px-6 text-center max-w-3xl mx-auto">
           <p className="mb-5 text-xs uppercase tracking-[0.5em] text-[#B5A05F]">
             Talca · Región del Maule
@@ -33,12 +29,12 @@ export default function HomePage() {
             Áreas de práctica
           </a>
         </div>
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
           <svg className="w-5 h-5 text-white/30 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
-      </section>
+      </HeroCarousel>
 
       {/* PILARES */}
       <section className="bg-[#f7f6f3] px-6 py-20">
