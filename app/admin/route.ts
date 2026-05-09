@@ -6,6 +6,7 @@ export function GET() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
   <title>Panel Academia · Olate &amp; Soto</title>
+  <link rel="cms-config-url" type="application/x-yaml" href="/cms-config.yml" />
   <style>
     body { margin: 0; font-family: sans-serif; }
   </style>
