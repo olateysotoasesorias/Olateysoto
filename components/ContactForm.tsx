@@ -72,6 +72,8 @@ export default function ContactForm() {
             name="phone"
             type="tel"
             placeholder="XXXX XXXX"
+            maxLength={8}
+            onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 8) }}
             className="flex-1 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none"
           />
         </div>
