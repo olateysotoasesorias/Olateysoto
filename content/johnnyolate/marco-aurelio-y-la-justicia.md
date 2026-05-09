@@ -3,6 +3,7 @@ title: 'Marco Aurelio y la Justicia: cuando la filosofía da forma al derecho'
 description: 'El emperador estoico gobernó el imperio más poderoso de su época guiado por Meditaciones, un diario íntimo que nunca fue escrito para publicarse. ¿Qué nos enseña sobre la relación entre ética y norma jurídica?'
 date: '2025-05-01'
 categoria: 'Estoicismo'
+autor: 'Johnny Olate'
 ---
 
 Marco Aurelio no era jurista. Era filósofo y general antes que abogado. Sin embargo, gobernó el Imperio Romano durante casi dos décadas (161–180 d.C.) y reformó su sistema judicial de maneras que aún resuenan en la teoría del derecho occidental.

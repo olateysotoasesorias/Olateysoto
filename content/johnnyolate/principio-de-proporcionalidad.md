@@ -3,6 +3,7 @@ title: 'El principio de proporcionalidad en el derecho chileno: entre la teoría
 description: 'El principio de proporcionalidad es uno de los más invocados por los tribunales superiores de Chile, pero también uno de los menos comprendidos en su estructura y alcance. Una revisión crítica.'
 date: '2025-04-15'
 categoria: 'Análisis Jurídico'
+autor: 'Johnny Olate'
 ---
 
 Pocas herramientas del razonamiento jurídico se usan con tanta frecuencia y con tan poca precisión como el principio de proporcionalidad. En Chile, la jurisprudencia del Tribunal Constitucional y de la Corte Suprema lo invoca constantemente, pero no siempre con rigor metodológico.

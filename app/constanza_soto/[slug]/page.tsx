@@ -1,0 +1,87 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+import { getAllPostsByAuthor, getPostBySlugAndAuthor, formatDate } from '../../../lib/blog'
+
+interface Props {
+  params: Promise<{ slug: string }>
+}
+
+export async function generateStaticParams() {
+  return getAllPostsByAuthor('constanza_soto').map((post) => ({ slug: post.slug }))
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const post = getPostBySlugAndAuthor('constanza_soto', slug)
+  if (!post) return {}
+  return {
+    title: `${post.title} — Constanza Soto`,
+    description: post.description,
+  }
+}
+
+export default async function ArticlePage({ params }: Props) {
+  const { slug } = await params
+  const post = getPostBySlugAndAuthor('constanza_soto', slug)
+  if (!post) notFound()
+
+  return (
+    <main className="min-h-screen bg-[#F8F9FA]">
+      <article className="mx-auto max-w-2xl px-6 py-14">
+
+        {/* Breadcrumb */}
+        <nav className="mb-10 flex items-center gap-2 text-xs text-neutral-gray/60">
+          <Link href="/" className="transition-colors hover:text-accent">Olate &amp; Soto</Link>
+          <span>/</span>
+          <Link href="/academia" className="transition-colors hover:text-accent">Academia</Link>
+          <span>/</span>
+          <Link href="/constanza_soto" className="transition-colors hover:text-accent">Constanza Soto</Link>
+          <span>/</span>
+          <span className="max-w-[200px] truncate text-neutral-gray/40">{post.title}</span>
+        </nav>
+
+        {/* Header */}
+        <header className="mb-10 border-b border-primary/10 pb-8">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="text-xs font-medium uppercase tracking-[0.24em] text-accent">
+              {post.categoria}
+            </span>
+            <span className="text-neutral-gray/30">·</span>
+            <time className="text-xs text-neutral-gray/60">{formatDate(post.date)}</time>
+          </div>
+          <h1 className="font-heading text-3xl font-semibold leading-snug text-primary sm:text-4xl">
+            {post.title}
+          </h1>
+          <p className="mt-4 text-base italic leading-7 text-neutral-gray">{post.description}</p>
+          <div className="mt-6 flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
+              <span className="font-heading text-sm font-semibold text-primary">CS</span>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-primary">Constanza Soto</p>
+              <p className="text-xs text-neutral-gray/60">Asesora Jurídica · Olate &amp; Soto</p>
+            </div>
+          </div>
+        </header>
+
+        {/* Contenido */}
+        <div className="prose-article">
+          <MDXRemote source={post.content} />
+        </div>
+
+        {/* Volver */}
+        <div className="mt-16 border-t border-primary/10 pt-8">
+          <Link
+            href="/constanza_soto"
+            className="text-sm font-medium uppercase tracking-[0.18em] text-accent hover:underline"
+          >
+            ← Volver al blog
+          </Link>
+        </div>
+
+      </article>
+    </main>
+  )
+}

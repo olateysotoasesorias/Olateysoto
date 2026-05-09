@@ -77,7 +77,7 @@ export default function HomePage() {
                   </svg>
                 </a>
                 <a
-                  href="/johnnyolate"
+                  href="/johnny_olate"
                   aria-label="Blog de Johnny Olate"
                   className="flex items-center gap-1 text-xs uppercase tracking-widest text-[#192A4D]/40 hover:text-[#B5A05F] transition-colors"
                 >
@@ -116,6 +116,17 @@ export default function HomePage() {
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+                <a
+                  href="/constanza_soto"
+                  aria-label="Blog de Constanza Soto"
+                  className="flex items-center gap-1 text-xs uppercase tracking-widest text-[#192A4D]/40 hover:text-[#B5A05F] transition-colors"
+                >
+                  <span>Blog</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5">
+                    <path d="M12 20h9"/>
+                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
                   </svg>
                 </a>
               </div>
@@ -182,7 +193,7 @@ export default function HomePage() {
                 mins: '6 min',
                 titulo: 'Marco Aurelio y la justicia del caso concreto',
                 desc: 'Cómo la filosofía estoica moldea una práctica legal orientada al bien común, más allá del formalismo procesal.',
-                href: '/johnnyolate/marco-aurelio-y-la-justicia',
+                href: '/johnny_olate/marco-aurelio-y-la-justicia',
               },
               {
                 num: '02',
@@ -190,7 +201,7 @@ export default function HomePage() {
                 mins: '8 min',
                 titulo: 'El principio de proporcionalidad en el derecho',
                 desc: 'Una revisión crítica de cómo los tribunales ponderan derechos en conflicto y qué significa para su caso.',
-                href: '/johnnyolate/principio-de-proporcionalidad',
+                href: '/johnny_olate/principio-de-proporcionalidad',
               },
               {
                 num: '03',
@@ -198,7 +209,7 @@ export default function HomePage() {
                 mins: '5 min',
                 titulo: 'Las Doce Tablas: fundamento del derecho moderno',
                 desc: 'El origen de la codificación legal y su influencia directa en el sistema jurídico chileno contemporáneo.',
-                href: '/johnnyolate/las-doce-tablas',
+                href: '/johnny_olate/las-doce-tablas',
               },
             ].map((art) => (
               <a
@@ -228,7 +239,7 @@ export default function HomePage() {
 
           <div className="mt-10 text-center">
             <a
-              href="/johnnyolate"
+              href="/academia"
               className="inline-block border border-[#192A4D]/20 px-8 py-3 text-xs uppercase tracking-[0.3em] text-[#192A4D]/60 hover:border-[#B5A05F] hover:text-[#B5A05F] transition-colors"
             >
               Ver todos los artículos
@@ -255,7 +266,7 @@ export default function HomePage() {
             Olate <span className="text-[#B5A05F]">&</span> Soto
           </span>
           <p className="text-xs text-white/30">© {new Date().getFullYear()} Olate & Soto Asesores Jurídicos · Talca, Chile</p>
-          <a href="/johnnyolate" className="text-xs text-[#B5A05F]/60 hover:text-[#B5A05F] transition-colors uppercase tracking-widest">
+          <a href="/academia" className="text-xs text-[#B5A05F]/60 hover:text-[#B5A05F] transition-colors uppercase tracking-widest">
             Academia
           </a>
         </div>

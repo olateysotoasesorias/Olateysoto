@@ -3,6 +3,7 @@ title: 'Las Doce Tablas: el nacimiento del derecho escrito y lo que nos enseña 
 description: 'En el año 450 a.C., Roma grabó por primera vez sus leyes en tablas de bronce expuestas en el Foro. No era un código moderno, pero fue el primer acto de transparencia jurídica de Occidente.'
 date: '2025-03-20'
 categoria: 'Historia del Derecho'
+autor: 'Johnny Olate'
 ---
 
 Hay una escena que me resulta difícil de no imaginar con cierta emoción: ciudadanos romanos reunidos en el Foro, leyendo por primera vez las leyes que los gobiernan. No porque las desconocieran del todo —muchas eran costumbre antigua— sino porque por primera vez estaban escritas, fijas, accesibles para cualquiera que supiera leer.
