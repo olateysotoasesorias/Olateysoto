@@ -269,6 +269,8 @@ export default function HomePage() {
           <a href="/academia" className="text-xs text-[#B5A05F]/60 hover:text-[#B5A05F] transition-colors uppercase tracking-widest">
             Academia
           </a>
+          {/* Enlace de acceso al panel — invisible */}
+          <a href="/admin" className="text-[#111827] text-[1px] select-none" tabIndex={-1} aria-hidden="true">·</a>
         </div>
       </footer>
 

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllPostsByAuthor, getPostBySlugAndAuthor, formatDate } from '../../../lib/blog'
+import DebateSection from '../../../components/DebateSection'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -71,8 +72,10 @@ export default async function ArticlePage({ params }: Props) {
           <MDXRemote source={post.content} />
         </div>
 
+        <DebateSection titulo={post.title} />
+
         {/* Volver */}
-        <div className="mt-16 border-t border-primary/10 pt-8">
+        <div className="mt-10 pt-2">
           <Link
             href="/johnny_olate"
             className="text-sm font-medium uppercase tracking-[0.18em] text-accent hover:underline"

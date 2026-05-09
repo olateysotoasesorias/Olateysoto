@@ -1,0 +1,65 @@
+backend:
+  name: github
+  repo: olateysotoasesorias/Olateysoto
+  branch: main
+  base_url: https://olateysoto.cl
+  auth_endpoint: /api/auth
+
+locale: es
+media_folder: public/blog-images
+public_folder: /blog-images
+
+collections:
+  - name: constanza_soto
+    label: "Mis artículos"
+    label_singular: "Artículo"
+    folder: content/constanza_soto
+    create: true
+    slug: "{{slug}}"
+    preview_path: /constanza_soto/{{slug}}
+    fields:
+      - label: "Título"
+        name: title
+        widget: string
+        hint: "El título principal del artículo"
+
+      - label: "Descripción breve"
+        name: description
+        widget: text
+        hint: "Resumen de 1 o 2 oraciones que aparece en el listado"
+
+      - label: "Fecha de publicación"
+        name: date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+
+      - label: "Categoría"
+        name: categoria
+        widget: select
+        options:
+          - label: "Análisis Jurídico"
+            value: "Análisis Jurídico"
+          - label: "Sentencias"
+            value: "Sentencias"
+          - label: "Reflexiones"
+            value: "Reflexiones"
+          - label: "Guías prácticas"
+            value: "Guías prácticas"
+          - label: "Derecho de Familia"
+            value: "Derecho de Familia"
+          - label: "Divulgación"
+            value: "Divulgación"
+          - label: "Apuntes"
+            value: "Apuntes"
+
+      - label: "Autor"
+        name: autor
+        widget: hidden
+        default: "Constanza Soto"
+
+      - label: "Contenido"
+        name: body
+        widget: markdown
+        hint: "Escribe aquí el artículo completo"
