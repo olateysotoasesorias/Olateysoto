@@ -13,7 +13,7 @@ export default function HeroCarousel({ children }: { children: React.ReactNode }
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent(prev => (prev + 1) % slides.length)
-    }, 5000)
+    }, 3500)
     return () => clearInterval(timer)
   }, [])
 

@@ -1,18 +1,21 @@
 'use server'
 
-import nodemailer from 'nodemailer'
+import { createTransport } from 'nodemailer'
 
 export async function sendContactEmail(formData: FormData) {
   const name = formData.get('name') as string
   const email = formData.get('email') as string
+  const phone = formData.get('phone') as string
   const message = formData.get('message') as string
 
   if (!name || !email || !message) {
     return { ok: false, error: 'Por favor completa todos los campos.' }
   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
+  const transporter = createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
       user: process.env.GMAIL_USER,
       pass: process.env.GMAIL_APP_PASSWORD,
@@ -31,6 +34,7 @@ export async function sendContactEmail(formData: FormData) {
           <div style="height: 2px; width: 40px; background: #B5A05F; margin-bottom: 24px;"></div>
           <p style="color: #555; font-size: 14px; margin: 0 0 8px;"><strong style="color: #192A4D;">Nombre:</strong> ${name}</p>
           <p style="color: #555; font-size: 14px; margin: 0 0 8px;"><strong style="color: #192A4D;">Correo:</strong> ${email}</p>
+          <p style="color: #555; font-size: 14px; margin: 0 0 8px;"><strong style="color: #192A4D;">Teléfono:</strong> ${phone ? `+569 ${phone}` : 'No indicado'}</p>
           <p style="color: #555; font-size: 14px; margin: 16px 0 8px;"><strong style="color: #192A4D;">Mensaje:</strong></p>
           <p style="color: #333; font-size: 15px; line-height: 1.7; background: #f9f9f9; padding: 16px; border-left: 3px solid #B5A05F;">${message}</p>
           <p style="color: #aaa; font-size: 12px; margin-top: 32px;">Olate & Soto Asesores Jurídicos · Talca</p>

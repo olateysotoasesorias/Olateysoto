@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import type { ReactNode } from 'react'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Navbar from '../components/Navbar'
+import WhatsAppButton from '../components/WhatsAppButton'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-background-white text-neutral-gray antialiased">
         <Navbar />
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   )
