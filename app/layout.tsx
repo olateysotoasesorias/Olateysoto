@@ -19,8 +19,17 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Olate & Soto',
+  title: {
+    default: 'Olate & Soto — Asesores Jurídicos Talca',
+    template: '%s — Olate & Soto',
+  },
   description: 'Asesores jurídicos especializados en familia, pyme, tributario y civil. Talca, Región del Maule.',
+  metadataBase: new URL('https://olateysoto.cl'),
+  openGraph: {
+    siteName: 'Olate & Soto',
+    locale: 'es_CL',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
