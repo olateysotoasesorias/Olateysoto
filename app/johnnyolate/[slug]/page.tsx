@@ -54,6 +54,7 @@ export default async function ArticlePage({ params }: Props) {
           <h1 className="font-heading text-3xl font-semibold leading-snug text-primary sm:text-4xl">
             {post.title}
           </h1>
+          <div className="mt-4 h-0.5 w-12 bg-accent" />
           <p className="mt-4 text-base italic leading-7 text-neutral-gray">
             {post.description}
           </p>
@@ -76,7 +77,7 @@ export default async function ArticlePage({ params }: Props) {
         {/* Volver */}
         <div className="mt-16 border-t border-primary/10 pt-8">
           <Link
-            href="/johnnyolate"
+            href="/johnny_olate"
             className="text-sm font-medium uppercase tracking-[0.18em] text-accent hover:underline"
           >
             ← Volver al blog
