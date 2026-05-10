@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import ContactForm from '../components/ContactForm'
 import HeroCarousel from '../components/HeroCarousel'
+import { getAllPostsCombined } from '../lib/blog'
 
 export default function HomePage() {
+  const latestPosts = getAllPostsCombined().slice(0, 3)
+
   return (
     <main className="bg-white text-[#1a1a2e]">
 
@@ -186,49 +189,24 @@ export default function HomePage() {
           <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
 
           <div className="grid gap-6 md:grid-cols-3">
-            {[
-              {
-                num: '01',
-                cat: 'Estoicismo jurídico',
-                mins: '6 min',
-                titulo: 'Marco Aurelio y la justicia del caso concreto',
-                desc: 'Cómo la filosofía estoica moldea una práctica legal orientada al bien común, más allá del formalismo procesal.',
-                href: '/johnny_olate/marco-aurelio-y-la-justicia',
-              },
-              {
-                num: '02',
-                cat: 'Análisis jurídico',
-                mins: '8 min',
-                titulo: 'El principio de proporcionalidad en el derecho',
-                desc: 'Una revisión crítica de cómo los tribunales ponderan derechos en conflicto y qué significa para su caso.',
-                href: '/johnny_olate/principio-de-proporcionalidad',
-              },
-              {
-                num: '03',
-                cat: 'Historia del derecho',
-                mins: '5 min',
-                titulo: 'Las Doce Tablas: fundamento del derecho moderno',
-                desc: 'El origen de la codificación legal y su influencia directa en el sistema jurídico chileno contemporáneo.',
-                href: '/johnny_olate/las-doce-tablas',
-              },
-            ].map((art) => (
+            {latestPosts.map((post, i) => (
               <a
-                key={art.num}
-                href={art.href}
+                key={post.slug}
+                href={`${post.autorPath}/${post.slug}`}
                 className="group/card relative bg-white p-8 flex flex-col hover:shadow-md transition-shadow"
               >
                 <span className="absolute top-6 right-6 font-heading text-5xl font-semibold text-[#B5A05F]/10 group-hover/card:text-[#B5A05F]/20 transition-colors select-none">
-                  {art.num}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">{art.cat}</span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">{post.categoria}</span>
                   <span className="text-gray-200">·</span>
-                  <span className="text-xs text-gray-400">{art.mins}</span>
+                  <span className="text-xs text-gray-400">{post.autor}</span>
                 </div>
                 <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug mb-3">
-                  {art.titulo}
+                  {post.title}
                 </h3>
-                <p className="text-sm leading-6 text-gray-500 flex-1">{art.desc}</p>
+                <p className="text-sm leading-6 text-gray-500 flex-1 line-clamp-3">{post.description}</p>
                 <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#192A4D]/40 group-hover/card:text-[#B5A05F] transition-colors font-medium">
                   <span>Leer artículo</span>
                   <span>→</span>

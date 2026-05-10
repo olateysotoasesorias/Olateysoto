@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllPostsByAuthor, getPostBySlugAndAuthor, formatDate } from '../../../lib/blog'
 import DebateSection from '../../../components/DebateSection'
+import ViewCounter from '../../../components/ViewCounter'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -52,6 +53,8 @@ export default async function ArticlePage({ params }: Props) {
             </span>
             <span className="text-neutral-gray/30">·</span>
             <time className="text-xs text-neutral-gray/60">{formatDate(post.date)}</time>
+            <span className="text-neutral-gray/30">·</span>
+            <ViewCounter slug={post.slug} />
           </div>
           <h1 className="font-heading text-3xl font-semibold leading-snug text-primary sm:text-4xl">
             {post.title}
