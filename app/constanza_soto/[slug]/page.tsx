@@ -63,7 +63,7 @@ export default async function ArticlePage({ params }: Props) {
           <p className="mt-4 text-base italic leading-7 text-neutral-gray">{post.description}</p>
           <div className="mt-6 flex items-center gap-3">
             <div className="relative h-9 w-9 overflow-hidden rounded-full">
-              <Image src="/equipo/soto.png" alt="Constanza Soto" fill className="object-cover" />
+              <Image src="/equipo/soto.png" alt="Constanza Soto" fill className="object-cover object-top" />
             </div>
             <div>
               <p className="text-sm font-medium text-primary">Constanza Soto</p>
