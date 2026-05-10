@@ -6,6 +6,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllPostsByAuthor, getPostBySlugAndAuthor, formatDate } from '../../../lib/blog'
 import DebateSection from '../../../components/DebateSection'
 import ViewCounter from '../../../components/ViewCounter'
+import CommentsSection from '../../../components/CommentsSection'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -77,6 +78,7 @@ export default async function ArticlePage({ params }: Props) {
           <MDXRemote source={post.content} />
         </div>
 
+        <CommentsSection slug={post.slug} />
         <DebateSection titulo={post.title} />
 
         {/* Volver */}
