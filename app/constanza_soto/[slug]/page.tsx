@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -57,8 +58,8 @@ export default async function ArticlePage({ params }: Props) {
           </h1>
           <p className="mt-4 text-base italic leading-7 text-neutral-gray">{post.description}</p>
           <div className="mt-6 flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10">
-              <span className="font-heading text-sm font-semibold text-primary">CS</span>
+            <div className="relative h-9 w-9 overflow-hidden rounded-full">
+              <Image src="/equipo/soto.png" alt="Constanza Soto" fill className="object-cover" />
             </div>
             <div>
               <p className="text-sm font-medium text-primary">Constanza Soto</p>
