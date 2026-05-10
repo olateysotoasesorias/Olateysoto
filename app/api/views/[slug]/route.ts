@@ -1,26 +1,23 @@
+import { Redis } from '@upstash/redis'
 import { NextRequest } from 'next/server'
 
-const UPSTASH_URL = process.env.UPSTASH_REDIS_REST_URL
-const UPSTASH_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN
-
-async function redis(command: string[]) {
-  if (!UPSTASH_URL || !UPSTASH_TOKEN) return null
-  const res = await fetch(`${UPSTASH_URL}/${command.map(encodeURIComponent).join('/')}`, {
-    headers: { Authorization: `Bearer ${UPSTASH_TOKEN}` },
-    cache: 'no-store',
-  })
-  const data = await res.json()
-  return data.result
-}
+const redis = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+  ? new Redis({
+      url: process.env.UPSTASH_REDIS_REST_URL,
+      token: process.env.UPSTASH_REDIS_REST_TOKEN,
+    })
+  : null
 
 export async function POST(_req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const count = await redis(['INCR', `views:${slug}`])
-  return Response.json({ count: count ?? 0 })
+  if (!redis) return Response.json({ count: 0 })
+  const count = await redis.incr(`views:${slug}`)
+  return Response.json({ count })
 }
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const count = await redis(['GET', `views:${slug}`])
-  return Response.json({ count: count ? Number(count) : 0 })
+  if (!redis) return Response.json({ count: 0 })
+  const count = (await redis.get<number>(`views:${slug}`)) ?? 0
+  return Response.json({ count })
 }
