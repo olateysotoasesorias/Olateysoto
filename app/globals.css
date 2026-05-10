@@ -46,6 +46,7 @@ h1, h2, h3, h4 {
   color: #222;
   font-size: 1.05rem;
   line-height: 1.85;
+  text-align: justify;
 }
 .prose-article h2 {
   font-family: var(--font-heading, "Playfair Display", Georgia, serif);
