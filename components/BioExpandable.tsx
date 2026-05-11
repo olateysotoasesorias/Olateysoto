@@ -5,41 +5,45 @@ export default function BioExpandable({ children }: { children: React.ReactNode 
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div className="relative">
+    <div className="relative mt-4">
+      {/* Texto con altura controlada */}
       <div
-        className={`overflow-hidden transition-all duration-700 ease-in-out ${
-          expanded ? 'max-h-[600px]' : 'max-h-[6.5rem]'
-        }`}
+        style={{ maxHeight: expanded ? '800px' : '5.6rem' }}
+        className="overflow-hidden transition-[max-height] duration-700 ease-in-out"
       >
         {children}
       </div>
 
-      {/* Fade + botón */}
+      {/* Degradado — pointer-events-none para no bloquear el botón */}
       {!expanded && (
-        <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center">
-          <div className="h-16 w-full bg-gradient-to-t from-[#f7f6f3] to-transparent" />
-        </div>
+        <div
+          className="pointer-events-none absolute bottom-0 left-0 right-0 h-16"
+          style={{ background: 'linear-gradient(to top, #f7f6f3 30%, transparent 100%)' }}
+        />
       )}
 
+      {/* Botón "ver más / ver menos" */}
       <button
         onClick={() => setExpanded((v) => !v)}
-        aria-label={expanded ? 'Ver menos' : 'Ver más'}
-        className="group mt-1 flex w-full flex-col items-center gap-0.5 pt-1"
+        className="relative mt-3 flex w-full flex-col items-center gap-1 overflow-hidden py-1 bio-shimmer"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-[#B5A05F]/70 transition-opacity group-hover:text-[#B5A05F]">
+        <span
+          style={{ letterSpacing: '0.28em' }}
+          className="text-[9px] uppercase text-[#B5A05F]/60 transition-colors duration-300 hover:text-[#B5A05F]"
+        >
           {expanded ? 'Ver menos' : 'Ver más'}
         </span>
+
+        {/* Flecha amplia */}
         <svg
-          viewBox="0 0 40 20"
+          viewBox="0 0 56 14"
           fill="none"
-          className={`w-10 text-[#B5A05F] transition-all duration-500 group-hover:text-[#c9b472] ${
-            expanded ? 'rotate-180' : ''
-          }`}
+          className={`w-14 text-[#B5A05F] transition-transform duration-500 ${expanded ? 'rotate-180' : ''}`}
         >
           <path
-            d="M2 4 L20 16 L38 4"
+            d="M2 2 L28 12 L54 2"
             stroke="currentColor"
-            strokeWidth="1.2"
+            strokeWidth="1"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
