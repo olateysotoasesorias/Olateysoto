@@ -165,36 +165,76 @@ export default function HomePage() {
       </section>
 
       {/* ÁREAS */}
-      <section id="areas" className="px-6 py-24">
-        <div className="mx-auto max-w-5xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Especialidades</p>
-          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Áreas de práctica</h2>
+      <section id="areas" className="px-6 py-24 bg-[#0a1322]">
+        <div className="mx-auto max-w-6xl">
+          <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Consultoría y litigación</p>
+          <h2 className="font-heading mt-3 text-3xl font-semibold text-white">Áreas de práctica</h2>
           <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-3">
             {[
               {
-                area: 'Derecho de Familia',
-                desc: 'Asesoría empática y profesional en divorcios, pensiones de alimentos, cuidado personal y mediación. Acompañamos a las familias con claridad y metas de protección duradera.',
-                items: ['Divorcios y separaciones', 'Pensiones de alimentos', 'Cuidado personal y tuición', 'Mediación familiar'],
+                titulo: 'Litigación Civil y Patrimonial',
+                desc: 'Diseño de estrategias procesales orientadas a la defensa, recuperación y escalabilidad del patrimonio frente a conflictos de alta complejidad.',
+                items: ['Cobranza judicial y defensa ejecutiva.', 'Responsabilidad civil e indemnizaciones.', 'Juicios de arrendamiento y precario.'],
+                href: '/academia?cat=Análisis Jurídico',
+                bg: 'linear-gradient(160deg, #06101e 0%, #0e1d33 50%, #081525 100%)',
               },
               {
-                area: 'Asesoría Pyme, Tributaria y Civil',
-                desc: 'Consultoría estratégica para empresas que buscan minimizar riesgos y fortalecer su posición legal. Redacción de contratos, cobranza judicial y constitución de sociedades.',
-                items: ['Redacción de contratos', 'Constitución de sociedades', 'Cobranza judicial', 'Protección al consumidor'],
+                titulo: 'Familia y Sucesorio',
+                desc: 'Dirección técnica en procesos judiciales para el resguardo del patrimonio familiar y la protección implacable del interés superior.',
+                items: ['Divorcios y compensación económica.', 'Pensiones de alimentos y cuidado personal.', 'Posesiones efectivas y partición de bienes.'],
+                href: '/academia?cat=Derecho de Familia',
+                bg: 'linear-gradient(160deg, #08111e 0%, #101e30 50%, #060f1c 100%)',
               },
-            ].map((a) => (
-              <div key={a.area} className="border border-gray-100 p-8 hover:border-[#B5A05F]/40 transition-colors">
-                <h3 className="font-heading text-xl font-semibold text-[#192A4D]">{a.area}</h3>
-                <p className="mt-4 text-sm leading-7 text-gray-500 text-justify">{a.desc}</p>
-                <ul className="mt-6 space-y-2">
-                  {a.items.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-sm text-gray-600">
-                      <span className="h-px w-4 bg-[#B5A05F] flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              {
+                titulo: 'Corporativo y Tributario',
+                desc: 'Consultoría preventiva y estructuración societaria para blindar operaciones empresariales frente a las nuevas exigencias normativas.',
+                items: ['Constitución y reorganización de sociedades.', 'Defensa y planificación tributaria (SII/TTA).', 'Contratación comercial y compliance.'],
+                href: '/academia?cat=Guías prácticas',
+                bg: 'linear-gradient(160deg, #090f18 0%, #111c28 50%, #070e1a 100%)',
+              },
+            ].map((area) => (
+              <div
+                key={area.titulo}
+                className="group/card relative flex flex-col overflow-hidden"
+                style={{ background: area.bg }}
+              >
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[#0d1929]/80 transition-opacity duration-500 group-hover/card:bg-[#0d1929]/70" />
+
+                {/* Borde dorado en hover */}
+                <div className="absolute inset-0 border border-white/5 transition-colors duration-500 group-hover/card:border-[#B5A05F]/40" />
+
+                {/* Contenido */}
+                <div className="relative z-10 flex flex-col flex-1 p-8">
+                  <div className="mb-6 h-px w-8 bg-[#B5A05F]/60 transition-all duration-500 group-hover/card:w-14 group-hover/card:bg-[#B5A05F]" />
+
+                  <h3 className="font-heading text-xl font-semibold leading-snug text-white">
+                    {area.titulo}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-7 text-white/55 text-justify">
+                    {area.desc}
+                  </p>
+
+                  <ul className="mt-6 flex-1 space-y-3">
+                    {area.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-white/50">
+                        <span className="mt-2.5 h-px w-4 flex-shrink-0 bg-[#B5A05F]/60" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href={area.href}
+                    className="mt-8 inline-flex items-center gap-2 border border-white/10 px-5 py-2.5 text-[10px] uppercase tracking-[0.3em] text-white/40 transition-all duration-300 hover:border-[#B5A05F]/60 hover:text-[#B5A05F]"
+                  >
+                    Explorar área
+                    <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
