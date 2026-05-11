@@ -266,9 +266,12 @@ export default function HomePage() {
               <a
                 key={post.slug}
                 href={`${post.autorPath}/${post.slug}`}
-                className="group/card relative bg-white p-8 flex flex-col hover:shadow-md transition-shadow"
+                className="group/card relative bg-white p-8 flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(181,160,95,0.13)]"
               >
-                <span className="absolute top-6 right-6 font-heading text-5xl font-semibold text-[#B5A05F]/10 group-hover/card:text-[#B5A05F]/20 transition-colors select-none">
+                {/* Franja dorada superior — se expande en hover */}
+                <span className="absolute inset-x-0 top-0 h-[3px] w-0 bg-[#B5A05F] transition-all duration-500 group-hover/card:w-full" />
+
+                <span className="absolute top-6 right-6 font-heading text-5xl font-semibold text-[#B5A05F]/10 transition-all duration-500 group-hover/card:text-[#B5A05F]/25 group-hover/card:-translate-y-1 select-none">
                   {String(i + 1).padStart(2, '0')}
                 </span>
                 <div className="flex items-center gap-3 mb-5">
@@ -280,9 +283,9 @@ export default function HomePage() {
                   {post.title}
                 </h3>
                 <p className="text-sm leading-6 text-gray-500 flex-1 line-clamp-3">{post.description}</p>
-                <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#192A4D]/40 group-hover/card:text-[#B5A05F] transition-colors font-medium">
+                <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#192A4D]/40 group-hover/card:text-[#B5A05F] transition-colors duration-300 font-medium">
                   <span>Leer artículo</span>
-                  <span>→</span>
+                  <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
                 </div>
               </a>
             ))}
