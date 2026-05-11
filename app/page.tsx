@@ -178,30 +178,38 @@ export default function HomePage() {
                 desc: 'Diseño de estrategias procesales orientadas a la defensa, recuperación y escalabilidad del patrimonio frente a conflictos de alta complejidad.',
                 items: ['Cobranza judicial y defensa ejecutiva.', 'Responsabilidad civil e indemnizaciones.', 'Juicios de arrendamiento y precario.'],
                 href: '/academia?cat=Análisis Jurídico',
-                bg: 'linear-gradient(160deg, #06101e 0%, #0e1d33 50%, #081525 100%)',
+                img: '/areas/litigacion.jpg',
               },
               {
                 titulo: 'Familia y Sucesorio',
                 desc: 'Dirección técnica en procesos judiciales para el resguardo del patrimonio familiar y la protección implacable del interés superior.',
                 items: ['Divorcios y compensación económica.', 'Pensiones de alimentos y cuidado personal.', 'Posesiones efectivas y partición de bienes.'],
                 href: '/academia?cat=Derecho de Familia',
-                bg: 'linear-gradient(160deg, #08111e 0%, #101e30 50%, #060f1c 100%)',
+                img: '/areas/familia.jpg',
               },
               {
                 titulo: 'Corporativo y Tributario',
                 desc: 'Consultoría preventiva y estructuración societaria para blindar operaciones empresariales frente a las nuevas exigencias normativas.',
                 items: ['Constitución y reorganización de sociedades.', 'Defensa y planificación tributaria (SII/TTA).', 'Contratación comercial y compliance.'],
                 href: '/academia?cat=Guías prácticas',
-                bg: 'linear-gradient(160deg, #090f18 0%, #111c28 50%, #070e1a 100%)',
+                img: '/areas/corporativo.jpg',
               },
             ].map((area) => (
               <div
                 key={area.titulo}
-                className="group/card relative flex flex-col overflow-hidden"
-                style={{ background: area.bg }}
+                className="group/card relative flex flex-col overflow-hidden bg-[#07101e]"
               >
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-[#0d1929]/80 transition-opacity duration-500 group-hover/card:bg-[#0d1929]/70" />
+                {/* Imagen de fondo */}
+                <Image
+                  src={area.img}
+                  alt=""
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover opacity-[0.22] scale-105 transition-all duration-700 group-hover/card:opacity-[0.32] group-hover/card:scale-100"
+                />
+
+                {/* Overlay degradado */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07101e] via-[#07101e]/80 to-[#07101e]/60 transition-opacity duration-500 group-hover/card:via-[#07101e]/70" />
 
                 {/* Borde dorado en hover */}
                 <div className="absolute inset-0 border border-white/5 transition-colors duration-500 group-hover/card:border-[#B5A05F]/40" />
