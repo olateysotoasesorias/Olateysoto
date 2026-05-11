@@ -2,7 +2,7 @@
 title: 'El interés superior del niño en el proceso de familia chileno'
 description: 'Un análisis de cómo los tribunales de familia aplican el principio del interés superior del niño en materias de cuidado personal y relación directa y reguladora.'
 date: '2025-05-01'
-categoria: 'Análisis Jurídico'
+categoria: 'Derecho de Familia'
 autor: 'Constanza Soto'
 ---
 

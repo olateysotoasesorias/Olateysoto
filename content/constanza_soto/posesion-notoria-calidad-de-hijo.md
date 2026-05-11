@@ -2,7 +2,7 @@
 title: "La posesión notoria de la calidad de hijo: Dogmática, evolución jurisprudencial y la consagración de la filiación socioafectiva"
 description: "Evolución dogmática y jurisprudencial de la posesión notoria de la calidad de hijo: su tránsito desde un mero medio probatorio hacia su reconocimiento como fundamento sustantivo y autónomo de la acción de filiación."
 date: 2026-05-09
-categoria: Análisis Jurídico
+categoria: Derecho de Familia
 autor: Constanza Soto
 ---
 
