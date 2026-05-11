@@ -190,14 +190,14 @@ export default function HomePage() {
               {
                 titulo: 'Corporativo y Tributario',
                 desc: 'Consultoría preventiva y estructuración societaria para blindar operaciones empresariales frente a las nuevas exigencias normativas.',
-                items: ['Constitución y reorganización de sociedades.', 'Defensa y planificación tributaria (SII/TTA).', 'Contratación comercial y compliance.'],
+                items: ['Constitución y reorganización de sociedades.', 'Contratación comercial y compliance.'],
                 href: '/academia?cat=Guías prácticas',
                 img: '/areas/corporativo.jpg',
               },
             ].map((area) => (
               <div
                 key={area.titulo}
-                className="group/card relative flex flex-col overflow-hidden bg-[#07101e]"
+                className="group/card relative flex flex-col overflow-hidden bg-[#07101e] min-h-[300px]"
               >
                 {/* Imagen de fondo */}
                 <Image
@@ -216,28 +216,33 @@ export default function HomePage() {
 
                 {/* Contenido */}
                 <div className="relative z-10 flex flex-col flex-1 p-8">
-                  <div className="mb-6 h-px w-8 bg-[#B5A05F]/60 transition-all duration-500 group-hover/card:w-14 group-hover/card:bg-[#B5A05F]" />
+                  <div className="h-px w-8 bg-[#B5A05F]/60 transition-all duration-500 group-hover/card:w-14 group-hover/card:bg-[#B5A05F]" />
 
-                  <h3 className="font-heading text-xl font-semibold leading-snug text-white">
+                  <h3 className="font-heading text-2xl font-semibold leading-snug text-white mt-14 transition-all duration-500 group-hover/card:mt-6 group-hover/card:text-xl">
                     {area.titulo}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-7 text-white/55 text-justify">
-                    {area.desc}
-                  </p>
-
-                  <ul className="mt-6 flex-1 space-y-3">
-                    {area.items.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-white/50">
-                        <span className="mt-2.5 h-px w-4 flex-shrink-0 bg-[#B5A05F]/60" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Descripción y lista — se revelan en hover */}
+                  <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 group-hover/card:grid-rows-[1fr] group-hover/card:opacity-100">
+                    <div className="overflow-hidden">
+                      <p className="mt-4 text-sm leading-7 text-white/55 text-justify">
+                        {area.desc}
+                      </p>
+                      <ul className="mt-5 space-y-3">
+                        {area.items.map((item) => (
+                          <li key={item} className="flex items-start gap-3 text-sm text-white/50">
+                            <span className="mt-2.5 h-px w-4 flex-shrink-0 bg-[#B5A05F]/60" />
+                            {item}
+                          </li>
+                        ))}
+                        <li className="pl-7 pt-1 text-xs italic text-white/25">y más...</li>
+                      </ul>
+                    </div>
+                  </div>
 
                   <a
                     href={area.href}
-                    className="mt-8 inline-flex items-center gap-2 border border-white/10 px-5 py-2.5 text-[10px] uppercase tracking-[0.3em] text-white/40 transition-all duration-300 hover:border-[#B5A05F]/60 hover:text-[#B5A05F]"
+                    className="mt-8 inline-flex w-fit items-center gap-2 border border-white/10 px-5 py-2.5 text-[10px] uppercase tracking-[0.3em] text-white/40 opacity-0 transition-all duration-500 group-hover/card:opacity-100 hover:border-[#B5A05F]/60 hover:text-[#B5A05F]"
                   >
                     Explorar área
                     <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
