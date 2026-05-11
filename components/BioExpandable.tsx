@@ -6,7 +6,6 @@ export default function BioExpandable({ children }: { children: React.ReactNode 
 
   return (
     <div className="relative mt-4">
-      {/* Texto con altura controlada */}
       <div
         style={{ maxHeight: expanded ? '800px' : '5.6rem' }}
         className="overflow-hidden transition-[max-height] duration-700 ease-in-out"
@@ -14,7 +13,6 @@ export default function BioExpandable({ children }: { children: React.ReactNode 
         {children}
       </div>
 
-      {/* Degradado — pointer-events-none para no bloquear el botón */}
       {!expanded && (
         <div
           className="pointer-events-none absolute bottom-0 left-0 right-0 h-16"
@@ -22,23 +20,25 @@ export default function BioExpandable({ children }: { children: React.ReactNode 
         />
       )}
 
-      {/* Botón "ver más / ver menos" */}
       <button
         onClick={() => setExpanded((v) => !v)}
-        className="relative mt-3 flex w-full flex-col items-center gap-1 overflow-hidden py-1 bio-shimmer"
+        className="group mt-3 flex w-full flex-col items-center gap-1 py-1"
       >
         <span
           style={{ letterSpacing: '0.28em' }}
-          className="text-[9px] uppercase text-[#B5A05F]/60 transition-colors duration-300 hover:text-[#B5A05F]"
+          className="text-[9px] uppercase text-[#B5A05F]/40 transition-all duration-300 group-hover:text-[#B5A05F]"
         >
           {expanded ? 'Ver menos' : 'Ver más'}
         </span>
 
-        {/* Flecha amplia */}
         <svg
           viewBox="0 0 56 14"
           fill="none"
-          className={`w-14 text-[#B5A05F] transition-transform duration-500 ${expanded ? 'rotate-180' : ''}`}
+          className={`w-14 transition-all duration-500 ${
+            expanded
+              ? 'rotate-180 text-[#B5A05F]'
+              : 'text-[#B5A05F]/30 group-hover:text-[#B5A05F] group-hover:drop-shadow-[0_0_6px_rgba(181,160,95,0.6)]'
+          }`}
         >
           <path
             d="M2 2 L28 12 L54 2"
