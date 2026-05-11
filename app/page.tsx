@@ -263,7 +263,7 @@ export default function HomePage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {latestPosts.map((post, i) => {
-              const borderColor = i % 2 === 0 ? '#B5A05F' : '#c8bfb0'
+              const borderColor = i === 0 ? '#B5A05F' : '#F5F5F5'
               return (
                 <a
                   key={post.slug}
