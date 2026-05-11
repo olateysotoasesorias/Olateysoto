@@ -1,24 +1,27 @@
 'use client'
 import { useState } from 'react'
 
-export default function BioExpandable({ children }: { children: React.ReactNode }) {
+export default function BioExpandable({
+  preview,
+  children,
+}: {
+  preview: React.ReactNode
+  children: React.ReactNode
+}) {
   const [expanded, setExpanded] = useState(false)
 
   return (
-    <div className="relative mt-4">
+    <div className="mt-4">
+      {/* Primer párrafo — siempre visible */}
+      {preview}
+
+      {/* Resto — se expande */}
       <div
-        style={{ maxHeight: expanded ? '800px' : '5.6rem' }}
+        style={{ maxHeight: expanded ? '800px' : '0px' }}
         className="overflow-hidden transition-[max-height] duration-700 ease-in-out"
       >
         {children}
       </div>
-
-      {!expanded && (
-        <div
-          className="pointer-events-none absolute bottom-0 left-0 right-0 h-16"
-          style={{ background: 'linear-gradient(to top, #f7f6f3 30%, transparent 100%)' }}
-        />
-      )}
 
       <button
         onClick={() => setExpanded((v) => !v)}
@@ -30,7 +33,6 @@ export default function BioExpandable({ children }: { children: React.ReactNode 
         >
           {expanded ? 'Ver menos' : 'Ver más'}
         </span>
-
         <svg
           viewBox="0 0 56 14"
           fill="none"
