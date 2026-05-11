@@ -12,8 +12,36 @@ export default function JohnnyOlatePage() {
   const posts = getAllPostsByAuthor('johnny_olate')
   const categorias = [...new Set(posts.map((p) => p.categoria))]
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Johnny Olate',
+    alternateName: 'Johnny Olate Rojas',
+    jobTitle: 'Asesor Jurídico',
+    description: 'Asesor jurídico especializado en litigación civil y derecho patrimonial. Socio fundador de Olate & Soto Asesores Jurídicos en Talca, Región del Maule.',
+    url: 'https://olateysoto.cl/johnny_olate',
+    image: 'https://olateysoto.cl/equipo/olate.jpg',
+    sameAs: [
+      'https://www.linkedin.com/in/johnny-olate-rojas-b16313237/',
+      'https://olateysoto.cl/johnny_olate',
+    ],
+    worksFor: {
+      '@type': 'LegalService',
+      name: 'Olate & Soto Asesores Jurídicos',
+      url: 'https://olateysoto.cl',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Talca',
+      addressRegion: 'Región del Maule',
+      addressCountry: 'CL',
+    },
+    knowsAbout: ['Derecho Civil', 'Litigación', 'Filosofía del Derecho', 'Estoicismo', 'Derecho Patrimonial'],
+  }
+
   return (
     <main className="min-h-screen bg-[#F8F9FA]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       {/* Hero */}
       <section className="border-b border-primary/10 bg-white px-6 py-16">

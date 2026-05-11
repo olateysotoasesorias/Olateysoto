@@ -7,8 +7,40 @@ import { getAllPostsCombined } from '../lib/blog'
 export default function HomePage() {
   const latestPosts = getAllPostsCombined().slice(0, 3)
 
+  const legalServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    name: 'Olate & Soto Asesores Jurídicos',
+    url: 'https://olateysoto.cl',
+    description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Talca',
+      addressRegion: 'Región del Maule',
+      addressCountry: 'CL',
+    },
+    areaServed: { '@type': 'Place', name: 'Región del Maule, Chile' },
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Johnny Olate',
+        jobTitle: 'Socio Fundador',
+        url: 'https://olateysoto.cl/johnny_olate',
+        sameAs: 'https://www.linkedin.com/in/johnny-olate-rojas-b16313237/',
+      },
+      {
+        '@type': 'Person',
+        name: 'Constanza Soto',
+        jobTitle: 'Socia Fundadora',
+        url: 'https://olateysoto.cl/constanza_soto',
+        sameAs: 'https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/',
+      },
+    ],
+  }
+
   return (
     <main className="bg-white text-[#1a1a2e]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(legalServiceSchema) }} />
 
       {/* HERO */}
       <HeroCarousel>

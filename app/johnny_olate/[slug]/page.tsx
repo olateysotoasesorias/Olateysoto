@@ -31,8 +31,29 @@ export default async function ArticlePage({ params }: Props) {
   const post = getPostBySlugAndAuthor('johnny_olate', slug)
   if (!post) notFound()
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    url: `https://olateysoto.cl/johnny_olate/${post.slug}`,
+    mainEntityOfPage: `https://olateysoto.cl/johnny_olate/${post.slug}`,
+    author: {
+      '@type': 'Person',
+      name: 'Johnny Olate',
+      url: 'https://olateysoto.cl/johnny_olate',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Olate & Soto Asesores Jurídicos',
+      url: 'https://olateysoto.cl',
+    },
+  }
+
   return (
     <main className="min-h-screen bg-[#F8F9FA]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <article className="mx-auto max-w-2xl px-6 py-14">
 
         {/* Breadcrumb */}
