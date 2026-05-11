@@ -255,7 +255,7 @@ export default function HomePage() {
       </section>
 
       {/* ACADEMIA */}
-      <section id="academia" className="bg-texture-academic px-6 py-24">
+      <section id="academia" className="bg-[#f7f6f3] px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Conocimiento jurídico</p>
           <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Academia — Artículos más recientes</h2>
@@ -263,51 +263,43 @@ export default function HomePage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {latestPosts.map((post, i) => {
-              const authorImg = post.autorPath === '/johnny_olate' ? '/equipo/olate.jpg' : '/equipo/soto.png'
-              const stripeColor = i % 2 === 0 ? '#B5A05F' : '#192A4D'
+              const borderColor = i % 2 === 0 ? '#B5A05F' : '#c8bfb0'
               return (
                 <a
                   key={post.slug}
                   href={`${post.autorPath}/${post.slug}`}
-                  className="group/card relative flex flex-col overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_32px_rgba(0,0,0,0.13)]"
+                  style={{ borderLeftColor: borderColor }}
+                  className="group/card relative flex flex-col bg-white border-l-2 shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.10)]"
                 >
-                  {/* Foto de autor — fondo desaturado muy sutil */}
-                  <Image
-                    src={authorImg}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover object-top grayscale opacity-[0.05] transition-opacity duration-500 group-hover/card:opacity-[0.09]"
-                  />
-
-                  {/* Franja superior con color alternado */}
-                  <div className="relative z-10 h-[3px] w-full flex-shrink-0" style={{ background: stripeColor }} />
-
-                  {/* Contenido */}
-                  <div className="relative z-10 flex flex-col flex-1 p-8">
-                    <span className="absolute right-6 top-5 font-heading text-5xl font-semibold text-[#B5A05F]/10 transition-all duration-500 group-hover/card:text-[#B5A05F]/25 select-none pointer-events-none">
+                  {/* Contenido siempre visible */}
+                  <div className="p-8">
+                    <span className="absolute right-6 top-6 font-heading text-5xl font-semibold text-[#192A4D]/[0.04] transition-all duration-500 group-hover/card:text-[#192A4D]/[0.07] select-none pointer-events-none">
                       {String(i + 1).padStart(2, '0')}
                     </span>
 
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: stripeColor }}>
+                      <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: borderColor }}>
                         {post.categoria}
                       </span>
                       <span className="text-gray-200">·</span>
                       <span className="text-xs text-gray-400">{post.autor}</span>
                     </div>
 
-                    <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug mb-3">
+                    <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug">
                       {post.title}
                     </h3>
 
-                    <p className="text-sm leading-6 text-gray-500 flex-1 line-clamp-3">
-                      {post.description}
-                    </p>
-
-                    <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">
-                      <span>Leer artículo</span>
-                      <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
+                    {/* Resumen — se despliega en hover */}
+                    <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover/card:grid-rows-[1fr] group-hover/card:opacity-100">
+                      <div className="overflow-hidden">
+                        <p className="mt-5 text-sm leading-7 text-gray-500">
+                          {post.description}
+                        </p>
+                        <div className="mt-5 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-[#B5A05F] font-medium">
+                          <span>Leer artículo</span>
+                          <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </a>
