@@ -1,5 +1,5 @@
 ---
-title: 'Séneca, su madre edípica y sus tres lecciones'
+title: 'Séneca, la madre edípica y tres lecciones desde el estoicismo'
 description: 'La ética estoica del siglo I frente a la psicología profunda contemporánea: una dicotomía sobre la naturaleza del amor maternal entre el desapego liberador y el control posesivo de la madre edípica.'
 date: '2026-05-10'
 categoria: 'Estoicismo'
