@@ -23,12 +23,20 @@ export const metadata: Metadata = {
     default: 'Olate & Soto — Asesores Jurídicos Talca',
     template: '%s — Olate & Soto',
   },
-  description: 'Asesores jurídicos especializados en familia, pyme, tributario y civil. Talca, Región del Maule.',
+  description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa. Rigor técnico y cercanía para personas y empresas del Maule.',
   metadataBase: new URL('https://olateysoto.cl'),
   openGraph: {
     siteName: 'Olate & Soto',
     locale: 'es_CL',
     type: 'website',
+    title: 'Olate & Soto — Asesores Jurídicos Talca',
+    description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa. Rigor técnico y cercanía para personas y empresas del Maule.',
+    url: 'https://olateysoto.cl',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Olate & Soto — Asesores Jurídicos Talca',
+    description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa.',
   },
 }
 
