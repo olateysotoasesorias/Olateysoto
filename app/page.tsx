@@ -94,7 +94,7 @@ export default function HomePage() {
               <p className="mt-0.5 text-xs uppercase tracking-[0.2em] text-[#B5A05F]">Socio Fundador</p>
               <div className="mt-3 h-px w-8 bg-[#B5A05F]" />
               <p className="mt-4 text-sm leading-7 text-gray-500 text-justify">
-                Socio fundador, Director y encargado de la estrategia legal en el área civil-comercial. Es egresado de Derecho de la Universidad de Talca, tras iniciar su formación académica en la Pontificia Universidad Católica de Chile (PUC). Su perfil combina una sólida base académica como ayudante de cátedra con la experiencia práctica obtenida como pasante en la Ilustrísima Corte de Apelaciones de Talca y en litigación privada.
+                Socio fundador, director y encargado de la estrategia legal en el área civil-comercial. Es egresado de Derecho de la Universidad de Talca, tras iniciar su formación académica en la Pontificia Universidad Católica de Chile (PUC). Su perfil combina una sólida base académica como ayudante de cátedra con la experiencia práctica obtenida como pasante en la Ilustrísima Corte de Apelaciones de Talca y en litigación privada.
 
                 Forjado en la resiliencia y los principios de la filosofía estoica, aborda el ejercicio jurídico como un sistema de control estratégico y disciplina técnica. Se especializa en litigación estratégica y derecho civil, integrando herramientas de inteligencia artificial y LegalTech para optimizar la estructuración de sociedades y la redacción de contratos complejos. Su enfoque se orienta a transformar la incertidumbre procesal en resultados concretos, garantizando la protección patrimonial y la paz mental de sus clientes mediante una representación implacable y de alto rigor doctrinal.
               </p>
@@ -138,7 +138,11 @@ export default function HomePage() {
               <p className="mt-0.5 text-xs uppercase tracking-[0.2em] text-[#B5A05F]">Socia Fundadora</p>
               <div className="mt-3 h-px w-8 bg-[#B5A05F]" />
               <p className="mt-4 text-sm leading-7 text-gray-500 text-justify">
-                Asesora jurídica y directora del área de familia. Egresada en Derecho por la Universidad de Talca. Con marcada vocación por la resolución de conflictos, centra su práctica en brindar un acompañamiento legal riguroso y profundamente humano. Su especialización comprende procesos complejos de divorcio, pensiones de alimentos, cuidado personal y medidas de protección. Destaca por su capacidad para comunicar escenarios jurídicos con claridad y empatía, priorizando la estabilidad emocional de sus representados y el interés superior de la infancia.
+                Socia fundadora y directora del área de familia. Egresada de Derecho de la Universidad de Talca. Su trayectoria se distingue por un sólido perfil académico, habiendo ejercido como ayudante de cátedra en múltiples disciplinas, con especial énfasis en el Derecho de Familia, Teoría del Derecho y un enfoque ético-humano.
+
+                Forjada bajo una perspectiva ética intachable y un rigor técnico innegociable, concibe su práctica como un acompañamiento legal donde convergen la precisión doctrinaria y una profunda sensibilidad humana. Su especialización comprende la dirección estratégica de procesos complejos de divorcio, pensiones de alimentos, cuidado personal y medidas de protección.
+
+                Impulsada por un férreo compromiso con el derecho de infancia y la defensa de los más vulnerables, destaca por su destreza para traducir escenarios jurídicos adversos con absoluta claridad y empatía. Su labor no se limita a la ejecución procesal, sino que se orienta a resguardar la estabilidad emocional de sus representados y garantizar, de manera implacable, el interés superior del niño, ofreciendo contención y seguridad en las esferas más sensibles del derecho.
               </p>
             </div>
 
