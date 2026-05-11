@@ -22,7 +22,11 @@ Un decemvirato —comisión de diez hombres— fue enviado a Grecia para estudia
 
 El texto original no sobrevivió: lo conocemos por citas en autores como Cicerón, Aulo Gelio y Ulpiano. Pero lo suficiente para apreciar que combinaba normas de derecho privado (contratos, herencias, propiedad), procesal (tiempos y formas para acudir a juicio) y penal (penas para ladrones, hechiceros, difamadores).
 
-Algunas disposiciones nos parecen brutales: la *Tabla III* permitía que los acreedores repartieran el cuerpo del deudor insolvente entre ellos. Otras son sorprendentemente modernas: la *Tabla IX* prohibía que se dictaran leyes especiales (*privilegia*) contra personas individuales —un antecedente directo de lo que hoy llamamos principio de igualdad ante la ley.
+Algunas disposiciones nos parecen brutales: la *Tabla III* permitía que los acreedores repartieran el cuerpo del deudor insolvente entre ellos. Otras son sorprendentemente modernas: la *Tabla IX* prohibía que se dictaran leyes especiales contra personas individuales —un antecedente directo de lo que hoy llamamos principio de igualdad ante la ley.
+
+> *«Privilegia ne inroganto.»*
+> No se dictarán leyes especiales contra personas individuales.
+> — Tabla IX, *Leges Duodecim Tabularum* (450 a.C.)
 
 ## La lección permanente
 

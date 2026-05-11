@@ -8,6 +8,9 @@ autor: 'Constanza Soto'
 
 El principio del interés superior del niño es el eje central de toda decisión judicial en materia de familia que involucre a menores de edad. Consagrado en la Convención sobre los Derechos del Niño de 1989 —ratificada por Chile en 1990— y recogido en el artículo 222 del Código Civil y en la Ley N° 19.968 sobre Tribunales de Familia, este principio actúa como criterio rector que debe orientar a todos quienes intervienen en el proceso.
 
+> *"En todas las medidas concernientes a los niños... una consideración primordial a que se atenderá será el interés superior del niño."*
+> — Convención sobre los Derechos del Niño, Artículo 3.1 (1989)
+
 ## ¿Qué significa en la práctica?
 
 El problema con el interés superior del niño no es su reconocimiento formal: nadie lo discute. El problema es su aplicación concreta.
