@@ -6,28 +6,39 @@ categoria: Derecho de Familia
 autor: Constanza Soto
 ---
 
-La institución de la posesión notoria de la calidad de hijo constituye, en el actual estadio de la ciencia jurídica, el epicentro de la tensión dialéctica entre la verdad biológica y la realidad sociológica. A partir de la promulgación de la Ley N° 19.585, normativa que derogó la anacrónica distinción entre hijos legítimos e ilegítimos, el ordenamiento chileno consagró un sistema integral de investigación de la paternidad y maternidad, en el cual la filiación no se subordina inexorablemente al nexo genético formal.
+La posesión notoria de la calidad de hijo es, en el estado actual de la ciencia jurídica, el epicentro de una tensión que el derecho chileno no termina de resolver: la disputa entre la verdad biológica y la realidad sociológica.
 
-## I. La arquitectura legal de la institución
+Desde la Ley N° 19.585 —que derogó la distinción entre hijos legítimos e ilegítimos— el ordenamiento consagró que la filiación no se subordina inexorablemente al nexo genético. Pero tardó décadas en sacar todas las consecuencias de esa premisa.
 
-La arquitectura legal de la institución descansa sobre el artículo 200 del Código Civil, precepto que exige la concurrencia copulativa de tres elementos fácticos ineludibles: el nombre, el trato y la fama. El nombre supone la identificación ininterrumpida del presunto hijo con los apellidos de sus progenitores en la esfera pública; el trato demanda que el progenitor haya provisto a la educación y establecimiento del hijo de un modo competente, reflejando el cuidado material y afectivo inherente a la relación filial; finalmente, la fama exige que el individuo sea reputado y reconocido inequívocamente como hijo por el vecindario, deudos y amigos.
+## La arquitectura legal: nombre, trato y fama
 
-El legislador, con estricto rigor, prescribe que esta configuración fáctica debe extenderse por un lapso no inferior a cinco años continuos; debiendo acreditarse mediante un acervo probatorio conformado por un conjunto de testimonios y antecedentes fidedignos que la establezcan de un modo irrefragable.
+La institución descansa sobre el artículo 200 del Código Civil, que exige la concurrencia de tres elementos: el nombre, el trato y la fama.
 
-## II. Evolución dogmática: de medio probatorio a acción autónoma
+El **nombre** supone que el presunto hijo se identifica con los apellidos de sus progenitores en la esfera pública. El **trato** demanda que el progenitor haya provisto su educación y establecimiento de un modo que refleje el cuidado inherente a la relación filial. La **fama** exige que el individuo sea reconocido como hijo por el vecindario, deudos y amigos.
 
-Históricamente, la doctrina y la jurisprudencia subsumieron esta figura en concepciones restrictivas que mermaban su eficacia sustantiva. El debate dogmático en torno a su naturaleza procesal se ha estructurado sobre tres postulados fundamentales.
+El legislador exige que esta configuración fáctica se extienda por un mínimo de cinco años continuos, acreditada mediante testimonios y antecedentes fidedignos.
 
-La primera exégesis la confinó a operar, de manera exclusiva, como un mero medio de prueba dentro de un juicio de reclamación o impugnación ya trabado; aduciendo que la locución legal «servirá también» le privaba de entidad para incoar una acción de manera independiente. Una segunda elaboración doctrinal dio un paso adelante al reconocerle la naturaleza de excepción procesal; esto es, un escudo defensivo que el progenitor social o el hijo pueden oponer frente a las pretensiones de quien, ostentando un vínculo puramente genético, intenta alterar una filiación socialmente consolidada. Esta función tuitiva halla su sustento normativo en el artículo 201 del Código Civil, el cual prescribe que la posesión notoria preferirá a las pruebas periciales de carácter biológico en caso de existir contradicción entre ambas.
+## De medio probatorio a acción autónoma
 
-En contraposición a las tesis precedentes, el estado del arte contemporáneo de la doctrina civilista reconoce a la posesión notoria como el fundamento material de una acción autónoma de filiación. Esta hermenéutica extrae su sustrato axiológico de la amplitud del derecho a la identidad, consagrado en la Convención sobre los Derechos del Niño, y de la recepción jurídica de la socioafectividad. Se colige que el cuidado fundado en el amor y en los afectos determina el goce del estado filiativo; erigiéndose como un fundamento suficiente y jurídicamente equivalente, o incluso superior, a la biología formal.
+Durante décadas, la doctrina y la jurisprudencia restringieron la posesión notoria a un mero medio de prueba dentro de un juicio ya trabado. La locución legal «servirá también» se interpretó como una privación de autonomía procesal.
 
-## III. El viraje jurisprudencial: Rol N° 18.213-2019
+Una segunda elaboración doctrinal le reconoció naturaleza de excepción procesal: un escudo que el progenitor social o el hijo pueden oponer frente a quien, con un vínculo puramente genético, intenta alterar una filiación socialmente consolidada. Esta función halla sustento normativo en el artículo 201 del Código Civil, que prescribe que la posesión notoria preferirá a las pruebas biológicas en caso de contradicción.
 
-El viraje jurisprudencial definitivo emana de la Corte Suprema a través del fallo Rol N° 18.213-2019. En dicha sentencia paradigmática, el máximo tribunal determinó que restringir la institución a un simple elemento de convicción procesal constituye una indudable falta al derecho. La magistratura coligió que el ordenamiento jurídico no impone a la verdad biológica como la fuente exclusiva de la filiación; admitiendo la procedencia de una acción autónoma fundada en la paternidad afectiva, y dotando de preeminencia a los vínculos familiares reales por sobre el determinismo genético.
+El estado del arte contemporáneo da un paso más: reconoce a la posesión notoria como fundamento material de una acción autónoma de filiación. El sustrato axiológico proviene del derecho a la identidad —consagrado en la Convención sobre los Derechos del Niño— y de la recepción jurídica de la socioafectividad. El cuidado fundado en el amor y en los afectos determina el goce del estado filiativo, erigiéndose como fundamento suficiente y jurídicamente equivalente, o incluso superior, a la biología formal.
 
-## IV. Vías de ejercicio y tensiones críticas
+## El viraje jurisprudencial: Rol N° 18.213-2019
 
-En la esfera procedimental, la institución admite tres vías para su ejercicio efectivo. Ante la inexistencia de filiación inscrita, procede su declaración mediante un procedimiento voluntario no contencioso ante los Juzgados Civiles, al tenor de los artículos 200 y 304 del Código Civil. En sede contenciosa, opera como excepción perentoria para neutralizar la acción del progenitor biológico, amparada en la regla de prelación del artículo 201. Finalmente, al amparo de la doctrina consolidada tras el fallo de 2019, habilita la interposición directa de una acción ordinaria de reclamación de filiación ante los Juzgados de Familia; cuya naturaleza es imprescriptible respecto del hijo, conforme al artículo 195 del Código Civil.
+El quiebre definitivo llegó con la Corte Suprema.
 
-El rigor temporal de los cinco años continuos ha sido objeto de severo escrutinio ante la jurisdicción constitucional, por cuanto puede devenir en un obstáculo jurídico desproporcionado que petrifica el derecho a la identidad frente al dinamismo social contemporáneo. La irrupción de la verdad sociológica ha propiciado proyecciones jurisprudenciales de profundo calado, tales como el reconocimiento de la triple filiación (causa C-617-2024 del Juzgado de Familia de Iquique); fenómeno que desborda la rigidez del modelo biparental clásico y exige una lectura integral de las normas internacionales de derechos humanos. La ciencia del derecho civil se encuentra ante el deber ineludible de armonizar el rigor de la codificación clásica con la evolución incesante de las relaciones humanas.
+En el fallo Rol N° 18.213-2019, el máximo tribunal determinó que restringir la institución a un elemento de convicción procesal constituye una indudable falta al derecho. El ordenamiento jurídico, razonó la magistratura, no impone la verdad biológica como fuente exclusiva de la filiación.
+
+> *La paternidad afectiva habilita una acción autónoma de filiación. Los vínculos familiares reales prevalecen sobre el determinismo genético.*
+> — Corte Suprema, Rol N° 18.213-2019
+
+## Vías de ejercicio y tensiones abiertas
+
+En la práctica, la institución admite tres vías. Ante la inexistencia de filiación inscrita, procede su declaración mediante procedimiento voluntario no contencioso ante los Juzgados Civiles, al tenor de los artículos 200 y 304 del Código Civil. En sede contenciosa, opera como excepción perentoria al amparo del artículo 201. Y tras el fallo de 2019, habilita directamente una acción ordinaria de reclamación ante los Juzgados de Familia, imprescriptible respecto del hijo conforme al artículo 195.
+
+El requisito de los cinco años continuos sigue siendo objeto de escrutinio constitucional: puede devenir en un obstáculo desproporcionado que petrifica el derecho a la identidad frente al dinamismo social contemporáneo.
+
+La irrupción de la socioafectividad ya ha producido proyecciones de calado, como el reconocimiento de la triple filiación en la causa C-617-2024 del Juzgado de Familia de Iquique. El derecho civil enfrenta el deber ineludible de armonizar el rigor de la codificación clásica con la evolución incesante de las relaciones humanas.
