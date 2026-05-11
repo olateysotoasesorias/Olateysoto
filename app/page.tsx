@@ -258,26 +258,25 @@ export default function HomePage() {
       <section id="academia" className="bg-texture-academic px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Conocimiento jurídico</p>
-          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Academia</h2>
+          <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Academia — Artículos más recientes</h2>
           <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
 
-          <div className="grid gap-6 md:grid-cols-3 md:grid-rows-2">
+          <div className="grid gap-6 md:grid-cols-3">
             {latestPosts.map((post, i) => {
-              const isFeatured = i === 0
               const authorImg = post.autorPath === '/johnny_olate' ? '/equipo/olate.jpg' : '/equipo/soto.png'
               const stripeColor = i % 2 === 0 ? '#B5A05F' : '#192A4D'
               return (
                 <a
                   key={post.slug}
                   href={`${post.autorPath}/${post.slug}`}
-                  className={`group/card relative flex flex-col overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_32px_rgba(0,0,0,0.13)]${isFeatured ? ' md:col-span-2 md:row-span-2' : ''}`}
+                  className="group/card relative flex flex-col overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_32px_rgba(0,0,0,0.13)]"
                 >
                   {/* Foto de autor — fondo desaturado muy sutil */}
                   <Image
                     src={authorImg}
                     alt=""
                     fill
-                    sizes={isFeatured ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-top grayscale opacity-[0.05] transition-opacity duration-500 group-hover/card:opacity-[0.09]"
                   />
 
@@ -285,10 +284,8 @@ export default function HomePage() {
                   <div className="relative z-10 h-[3px] w-full flex-shrink-0" style={{ background: stripeColor }} />
 
                   {/* Contenido */}
-                  <div className={`relative z-10 flex flex-col flex-1 ${isFeatured ? 'p-10' : 'p-7'}`}>
-                    <span
-                      className={`absolute right-6 top-5 font-heading font-semibold text-[#B5A05F]/10 transition-all duration-500 group-hover/card:text-[#B5A05F]/25 select-none pointer-events-none ${isFeatured ? 'text-7xl' : 'text-5xl'}`}
-                    >
+                  <div className="relative z-10 flex flex-col flex-1 p-8">
+                    <span className="absolute right-6 top-5 font-heading text-5xl font-semibold text-[#B5A05F]/10 transition-all duration-500 group-hover/card:text-[#B5A05F]/25 select-none pointer-events-none">
                       {String(i + 1).padStart(2, '0')}
                     </span>
 
@@ -300,11 +297,11 @@ export default function HomePage() {
                       <span className="text-xs text-gray-400">{post.autor}</span>
                     </div>
 
-                    <h3 className={`font-heading font-semibold text-[#192A4D] leading-snug mb-3 ${isFeatured ? 'text-2xl' : 'text-lg'}`}>
+                    <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug mb-3">
                       {post.title}
                     </h3>
 
-                    <p className={`text-sm leading-6 text-gray-500 flex-1 ${isFeatured ? 'line-clamp-5' : 'line-clamp-3'}`}>
+                    <p className="text-sm leading-6 text-gray-500 flex-1 line-clamp-3">
                       {post.description}
                     </p>
 
