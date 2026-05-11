@@ -85,3 +85,15 @@ h1, h2, h3, h4 {
   font-weight: 700;
   color: #192A4D;
 }
+
+/* Fondo texturizado sección Academia */
+.bg-texture-academic {
+  background-color: #dedad3;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0,
+    transparent 3px,
+    rgba(0, 0, 0, 0.014) 3px,
+    rgba(0, 0, 0, 0.014) 4px
+  );
+}

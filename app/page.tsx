@@ -255,40 +255,67 @@ export default function HomePage() {
       </section>
 
       {/* ACADEMIA */}
-      <section id="academia" className="bg-[#f7f6f3] px-6 py-24">
+      <section id="academia" className="bg-texture-academic px-6 py-24">
         <div className="mx-auto max-w-5xl">
           <p className="text-xs uppercase tracking-[0.35em] text-[#B5A05F]">Conocimiento jurídico</p>
           <h2 className="font-heading mt-3 text-3xl font-semibold text-[#192A4D]">Academia</h2>
           <div className="mt-px mb-12 h-0.5 w-12 bg-[#B5A05F]" />
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {latestPosts.map((post, i) => (
-              <a
-                key={post.slug}
-                href={`${post.autorPath}/${post.slug}`}
-                className="group/card relative bg-white p-8 flex flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(181,160,95,0.13)]"
-              >
-                {/* Franja dorada superior — se expande en hover */}
-                <span className="absolute inset-x-0 top-0 h-[3px] w-0 bg-[#B5A05F] transition-all duration-500 group-hover/card:w-full" />
+          <div className="grid gap-6 md:grid-cols-3 md:grid-rows-2">
+            {latestPosts.map((post, i) => {
+              const isFeatured = i === 0
+              const authorImg = post.autorPath === '/johnny_olate' ? '/equipo/olate.jpg' : '/equipo/soto.png'
+              const stripeColor = i % 2 === 0 ? '#B5A05F' : '#192A4D'
+              return (
+                <a
+                  key={post.slug}
+                  href={`${post.autorPath}/${post.slug}`}
+                  className={`group/card relative flex flex-col overflow-hidden bg-white shadow-[0_4px_20px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_32px_rgba(0,0,0,0.13)]${isFeatured ? ' md:col-span-2 md:row-span-2' : ''}`}
+                >
+                  {/* Foto de autor — fondo desaturado muy sutil */}
+                  <Image
+                    src={authorImg}
+                    alt=""
+                    fill
+                    sizes={isFeatured ? '(max-width: 768px) 100vw, 66vw' : '(max-width: 768px) 100vw, 33vw'}
+                    className="object-cover object-top grayscale opacity-[0.05] transition-opacity duration-500 group-hover/card:opacity-[0.09]"
+                  />
 
-                <span className="absolute top-6 right-6 font-heading text-5xl font-semibold text-[#B5A05F]/10 transition-all duration-500 group-hover/card:text-[#B5A05F]/25 group-hover/card:-translate-y-1 select-none">
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">{post.categoria}</span>
-                  <span className="text-gray-200">·</span>
-                  <span className="text-xs text-gray-400">{post.autor}</span>
-                </div>
-                <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug mb-3">
-                  {post.title}
-                </h3>
-                <p className="text-sm leading-6 text-gray-500 flex-1 line-clamp-3">{post.description}</p>
-                <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#192A4D]/40 group-hover/card:text-[#B5A05F] transition-colors duration-300 font-medium">
-                  <span>Leer artículo</span>
-                  <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
-                </div>
-              </a>
-            ))}
+                  {/* Franja superior con color alternado */}
+                  <div className="relative z-10 h-[3px] w-full flex-shrink-0" style={{ background: stripeColor }} />
+
+                  {/* Contenido */}
+                  <div className={`relative z-10 flex flex-col flex-1 ${isFeatured ? 'p-10' : 'p-7'}`}>
+                    <span
+                      className={`absolute right-6 top-5 font-heading font-semibold text-[#B5A05F]/10 transition-all duration-500 group-hover/card:text-[#B5A05F]/25 select-none pointer-events-none ${isFeatured ? 'text-7xl' : 'text-5xl'}`}
+                    >
+                      {String(i + 1).padStart(2, '0')}
+                    </span>
+
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: stripeColor }}>
+                        {post.categoria}
+                      </span>
+                      <span className="text-gray-200">·</span>
+                      <span className="text-xs text-gray-400">{post.autor}</span>
+                    </div>
+
+                    <h3 className={`font-heading font-semibold text-[#192A4D] leading-snug mb-3 ${isFeatured ? 'text-2xl' : 'text-lg'}`}>
+                      {post.title}
+                    </h3>
+
+                    <p className={`text-sm leading-6 text-gray-500 flex-1 ${isFeatured ? 'line-clamp-5' : 'line-clamp-3'}`}>
+                      {post.description}
+                    </p>
+
+                    <div className="mt-6 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#B5A05F] font-medium">
+                      <span>Leer artículo</span>
+                      <span className="transition-transform duration-300 group-hover/card:translate-x-1">→</span>
+                    </div>
+                  </div>
+                </a>
+              )
+            })}
           </div>
 
           <div className="mt-10 text-center">
