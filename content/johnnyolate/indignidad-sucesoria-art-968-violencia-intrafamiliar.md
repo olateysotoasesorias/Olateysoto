@@ -47,4 +47,4 @@ Alterar la certidumbre del derecho sucesorio en desmedro del principio de tipici
 
 ---
 
-[Click aquí para ver la sentencia completa](https://drive.google.com/file/d/1ShIgEPlGRc1OVsCZ8teZ61ZgNsfTgP7N/view?usp=sharing)
+<a href="https://drive.google.com/file/d/1ShIgEPlGRc1OVsCZ8teZ61ZgNsfTgP7N/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:10px 28px;background:#B5A05F;color:#192A4D;font-size:12px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;">Ver sentencia completa →</a>
