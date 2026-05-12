@@ -85,6 +85,23 @@ h1, h2, h3, h4 {
   font-weight: 700;
   color: #192A4D;
 }
+.prose-article .article-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 11px 28px;
+  background: #B5A05F;
+  color: #192A4D !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.prose-article .article-btn:hover {
+  background: #c9b472;
+}
 
 /* Fondo texturizado sección Academia */
 .bg-texture-academic {
