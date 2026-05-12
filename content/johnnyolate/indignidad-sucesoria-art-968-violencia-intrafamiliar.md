@@ -44,3 +44,7 @@ Existe una tensión real entre los axiomas contemporáneos del derecho de famili
 La violencia intrafamiliar merece una respuesta normativa enérgica. Pero esa respuesta debe venir del Parlamento: ampliando explícitamente el catálogo del artículo 968, precisando los supuestos de hecho, dotando al precepto de la claridad que solo la norma expresa puede otorgar.
 
 Alterar la certidumbre del derecho sucesorio en desmedro del principio de tipicidad es un camino que, aunque bienintencionado, compromete la estabilidad del sistema institucional. El derecho no avanza bien cuando los jueces hacen el trabajo que corresponde al legislador.
+
+---
+
+[Click aquí para ver la sentencia completa](https://drive.google.com/file/d/1ShIgEPlGRc1OVsCZ8teZ61ZgNsfTgP7N/view?usp=sharing)
