@@ -1,7 +1,7 @@
 ---
 title: 'Art. 968 N° 2 del Código Civil: indignidad sucesoria y los límites de la interpretación judicial'
 description: 'La Corte Suprema declaró indigno al cónyuge condenado por lesiones en contexto de violencia intrafamiliar. Un análisis dogmático que examina los límites de la interpretación extensiva en las penas civiles y el costo sistémico de la incertidumbre jurídica.'
-date: '2025-05-12'
+date: '2026-05-12'
 categoria: 'Análisis Jurídico'
 autor: 'Johnny Olate'
 ---
