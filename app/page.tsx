@@ -295,7 +295,8 @@ export default function HomePage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {latestPosts.map((post, i) => {
-              const borderColor = i === 0 ? '#B5A05F' : '#F5F5F5'
+              const borderColor = i === 0 ? '#B5A05F' : '#E8E8E8'
+              const catColor = i === 0 ? '#B5A05F' : '#94a3b8'
               return (
                 <a
                   key={post.slug}
@@ -310,7 +311,7 @@ export default function HomePage() {
                     </span>
 
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: borderColor }}>
+                      <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: catColor }}>
                         {post.categoria}
                       </span>
                       <span className="text-gray-200">·</span>
