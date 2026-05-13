@@ -1,7 +1,7 @@
 ---
 title: 'Dogmática y exégesis de la acción filiativa post mortem: análisis crítico del artículo 206 del Código Civil'
 description: 'El artículo 206 impone un plazo de caducidad que colisiona con la imprescriptibilidad del derecho a reclamar la filiación. Un análisis crítico de la antinomia estructural entre seguridad patrimonial e identidad, a la luz de la jurisprudencia constitucional.'
-date: '2026-05-12'
+date: '2026-05-13'
 categoria: 'Derecho de Familia'
 autor: 'Constanza Soto'
 ---
