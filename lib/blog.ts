@@ -22,6 +22,16 @@ export interface PostFull extends Post {
   content: string
 }
 
+function normalizeSlug(raw: string): string {
+  return raw
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, '-')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
 function readDir(dir: string, autorName: string, autorSlug: string, autorPath: string): Post[] {
   const dirPath = path.join(process.cwd(), 'content', dir)
   if (!fs.existsSync(dirPath)) return []
@@ -29,7 +39,7 @@ function readDir(dir: string, autorName: string, autorSlug: string, autorPath: s
     .readdirSync(dirPath)
     .filter((f) => f.endsWith('.md'))
     .map((filename) => {
-      const slug = filename.replace(/\.md$/, '')
+      const slug = normalizeSlug(filename.replace(/\.md$/, ''))
       const { data } = matter(fs.readFileSync(path.join(dirPath, filename), 'utf-8'))
       return {
         slug,
@@ -65,9 +75,13 @@ export function getAllPostsByAuthor(autorSlug: string): Post[] {
 export function getPostBySlugAndAuthor(autorSlug: string, slug: string): PostFull | null {
   const author = AUTHORS.find((a) => a.slug === autorSlug)
   if (!author) return null
-  const filepath = path.join(process.cwd(), 'content', author.dir, `${slug}.md`)
-  if (!fs.existsSync(filepath)) return null
-  const { data, content } = matter(fs.readFileSync(filepath, 'utf-8'))
+  const dirPath = path.join(process.cwd(), 'content', author.dir)
+  if (!fs.existsSync(dirPath)) return null
+  const filename = fs.readdirSync(dirPath)
+    .filter((f) => f.endsWith('.md'))
+    .find((f) => normalizeSlug(f.replace(/\.md$/, '')) === slug)
+  if (!filename) return null
+  const { data, content } = matter(fs.readFileSync(path.join(dirPath, filename), 'utf-8'))
   return {
     slug,
     title: data.title as string,
@@ -91,7 +105,7 @@ export function getAllPosts(): Post[] {
 }
 
 export function getPostBySlug(slug: string): PostFull | null {
-  return getPostBySlugAndAuthor('johnny_olate', slug)
+  return getPostBySlugAndAuthor('johnny_olate', normalizeSlug(slug))
 }
 
 export function formatDate(dateStr: string): string {
