@@ -37,7 +37,7 @@ function readDir(dir: string, autorName: string, autorSlug: string, autorPath: s
   if (!fs.existsSync(dirPath)) return []
   return fs
     .readdirSync(dirPath)
-    .filter((f) => f.endsWith('.md'))
+    .filter((f) => f.endsWith('.md') && f.toUpperCase() !== 'PLANTILLA.MD')
     .map((filename) => {
       const slug = normalizeSlug(filename.replace(/\.md$/, ''))
       const { data } = matter(fs.readFileSync(path.join(dirPath, filename), 'utf-8'))
@@ -78,7 +78,7 @@ export function getPostBySlugAndAuthor(autorSlug: string, slug: string): PostFul
   const dirPath = path.join(process.cwd(), 'content', author.dir)
   if (!fs.existsSync(dirPath)) return null
   const filename = fs.readdirSync(dirPath)
-    .filter((f) => f.endsWith('.md'))
+    .filter((f) => f.endsWith('.md') && f.toUpperCase() !== 'PLANTILLA.MD')
     .find((f) => normalizeSlug(f.replace(/\.md$/, '')) === slug)
   if (!filename) return null
   const { data, content } = matter(fs.readFileSync(path.join(dirPath, filename), 'utf-8'))
