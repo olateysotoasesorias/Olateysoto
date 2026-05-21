@@ -295,37 +295,43 @@ export default function HomePage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {latestPosts.map((post, i) => {
-              const borderColor = i === 0 ? '#B5A05F' : '#E8E8E8'
-              const catColor = i === 0 ? '#B5A05F' : '#94a3b8'
+              const featured = i === 0
               return (
                 <a
                   key={post.slug}
                   href={`${post.autorPath}/${post.slug}`}
-                  style={{ borderLeftColor: borderColor }}
-                  className="group/card relative flex flex-col bg-white border-l-2 shadow-[0_2px_16px_rgba(0,0,0,0.06)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_28px_rgba(0,0,0,0.10)]"
+                  className={`group/card relative flex flex-col transition-all duration-300 hover:-translate-y-1 ${
+                    featured
+                      ? 'bg-[#192A4D] border-l-2 border-[#B5A05F] shadow-[0_4px_24px_rgba(25,42,77,0.18)] hover:shadow-[0_12px_36px_rgba(25,42,77,0.28)]'
+                      : 'bg-white border-t-2 border-[#E8E8E8] shadow-[0_2px_16px_rgba(0,0,0,0.05)] hover:border-t-[#B5A05F] hover:shadow-[0_8px_28px_rgba(0,0,0,0.10)]'
+                  }`}
                 >
-                  {/* Contenido siempre visible */}
                   <div className="p-8">
-                    <span className="absolute right-6 top-6 font-heading text-5xl font-semibold text-[#192A4D]/[0.04] transition-all duration-500 group-hover/card:text-[#192A4D]/[0.07] select-none pointer-events-none">
+                    {/* Número watermark */}
+                    <span className={`absolute right-6 top-5 font-heading text-6xl font-semibold select-none pointer-events-none transition-all duration-500 ${
+                      featured
+                        ? 'text-white/[0.06] group-hover/card:text-white/[0.10]'
+                        : 'text-[#192A4D]/[0.04] group-hover/card:text-[#192A4D]/[0.08]'
+                    }`}>
                       {String(i + 1).padStart(2, '0')}
                     </span>
 
                     <div className="flex items-center gap-3 mb-4">
-                      <span className="text-xs uppercase tracking-[0.2em] font-medium" style={{ color: catColor }}>
+                      <span className={`text-xs uppercase tracking-[0.2em] font-medium ${featured ? 'text-[#B5A05F]' : 'text-[#94a3b8]'}`}>
                         {post.categoria}
                       </span>
-                      <span className="text-gray-200">·</span>
-                      <span className="text-xs text-gray-400">{post.autor}</span>
+                      <span className={featured ? 'text-white/20' : 'text-gray-200'}>·</span>
+                      <span className={`text-xs ${featured ? 'text-white/40' : 'text-gray-400'}`}>{post.autor}</span>
                     </div>
 
-                    <h3 className="font-heading text-lg font-semibold text-[#192A4D] leading-snug">
+                    <h3 className={`font-heading text-lg font-semibold leading-snug ${featured ? 'text-white' : 'text-[#192A4D]'}`}>
                       {post.title}
                     </h3>
 
                     {/* Resumen — se despliega en hover */}
                     <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-in-out group-hover/card:grid-rows-[1fr] group-hover/card:opacity-100">
                       <div className="overflow-hidden">
-                        <p className="mt-5 text-sm leading-7 text-gray-500">
+                        <p className={`mt-5 text-sm leading-7 ${featured ? 'text-white/55' : 'text-gray-500'}`}>
                           {post.description}
                         </p>
                         <div className="mt-5 flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-[#B5A05F] font-medium">
