@@ -1,11 +1,10 @@
 ---
 title: "La purga de la indignidad en las herencias: ¿Cuándo comienza a contarse
   el plazo para el perdón? "
-description: >-
-  El artículo explica de forma clara cómo la indignidad para suceder se perdona
-  definitivamente al transcurrir cinco años de posesión.
-
-  El texto detalla que este plazo corre automáticamente desde la muerte del causante y se transmite de manera continua a los herederos.
+description: La indignidad sucesoria no es un castigo eterno. El artículo 975
+  del Código Civil establece que se purga en cinco años de posesión. Un análisis
+  sobre cómo corre ese plazo, desde cuándo, y qué ocurre cuando el heredero
+  indigno fallece antes de cumplirlo.
 date: 2026-05-23
 categoria: Análisis Jurídico
 autor: Constanza Soto
