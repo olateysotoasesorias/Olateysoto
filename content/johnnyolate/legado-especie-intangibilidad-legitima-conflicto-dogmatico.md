@@ -3,7 +3,7 @@ title: 'El legado de especie y la integridad de la legítima: ¿intangibilidad c
 description: 'Cuando el testador instituye un legado de especie que excede la cuarta de libre disposición, la doctrina ofrece dos respuestas incompatibles: comunidad forzosa sobre el bien, o compensación económica a los legitimarios.'
 date: '2026-06-05'
 categoria: 'Análisis Jurídico'
-autor: 'Constanza Soto'
+autor: 'Johnny Olate'
 ---
 
 En el Derecho Sucesorio chileno, el legatario de especie adquiere el dominio de la cosa legada al momento exacto del fallecimiento del causante. Sin embargo, esa adquisición *ipso iure* colisiona con un límite infranqueable: las asignaciones forzosas. Cuando el legado excede la cuarta de libre disposición, los legitimarios pueden ejercer la acción de reforma de testamento y exigir la reducción proporcional.
