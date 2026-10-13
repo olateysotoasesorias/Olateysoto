@@ -68,7 +68,7 @@ export async function GET() {
             fontFamily: 'system-ui, sans-serif',
             marginTop: 18,
           }}>
-            Asesor Jurídico · Socio Fundador
+            Asesor Jurídico · Fundador
           </div>
 
         </div>
@@ -98,7 +98,7 @@ export async function GET() {
 
           <div style={{ width: 32, height: 1, background: '#B5A05F', opacity: 0.5 }} />
 
-          {['Litigación Civil', 'Derecho de Familia', 'Asesoría Corporativa'].map((area) => (
+          {['Derecho Civil', 'Derecho de Familia', 'Redacción para abogados'].map((area) => (
             <div key={area} style={{
               display: 'flex',
               alignItems: 'center',

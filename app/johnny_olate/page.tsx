@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllPostsByAuthor, formatDate } from '../../lib/blog'
+import { waLink } from '../../lib/contacto'
 
 export const metadata: Metadata = {
   title: 'Johnny Olate — Derecho, Estoicismo y Filosofía',
@@ -18,9 +19,13 @@ export default function JohnnyOlatePage() {
     name: 'Johnny Olate',
     alternateName: 'Johnny Olate Rojas',
     jobTitle: 'Asesor Jurídico',
-    description: 'Asesor jurídico especializado en litigación civil y derecho patrimonial. Socio fundador de Olate & Soto Asesores Jurídicos en Talca, Región del Maule.',
+    description: 'Asesor jurídico en derecho civil y sucesorio. Fundador de Olate & Soto Asesores Jurídicos (Talca) y de El Criterio, monitor diario de jurisprudencia de la Corte Suprema.',
     url: 'https://olateysoto.cl/johnny_olate',
     image: 'https://olateysoto.cl/equipo/olate.jpg',
+    alumniOf: [
+      { '@type': 'CollegeOrUniversity', name: 'Universidad de Talca' },
+      { '@type': 'CollegeOrUniversity', name: 'Pontificia Universidad Católica de Chile' },
+    ],
     sameAs: [
       'https://www.linkedin.com/in/johnny-olate-rojas-b16313237/',
       'https://olateysoto.cl/johnny_olate',
@@ -36,7 +41,7 @@ export default function JohnnyOlatePage() {
       addressRegion: 'Región del Maule',
       addressCountry: 'CL',
     },
-    knowsAbout: ['Derecho Civil', 'Litigación', 'Filosofía del Derecho', 'Estoicismo', 'Derecho Patrimonial'],
+    knowsAbout: ['Derecho Civil', 'Derecho Sucesorio', 'Redacción jurídica', 'Filosofía del Derecho', 'Estoicismo', 'Derecho Patrimonial'],
   }
 
   return (
@@ -58,6 +63,22 @@ export default function JohnnyOlatePage() {
             antiguas tienen respuestas a los problemas modernos, y que el derecho bien entendido
             es una forma de filosofía aplicada.
           </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href="/#abogados"
+              className="inline-block bg-primary px-6 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-accent hover:text-primary"
+            >
+              Redacción para abogados
+            </a>
+            <a
+              href={waLink('johnny', 'Hola Johnny, necesito orientación en un tema civil.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-primary/20 px-6 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-primary transition-colors hover:border-accent hover:text-accent"
+            >
+              Consultar por WhatsApp
+            </a>
+          </div>
           <div className="mt-6 flex flex-wrap gap-3">
             {categorias.map((cat) => (
               <Link

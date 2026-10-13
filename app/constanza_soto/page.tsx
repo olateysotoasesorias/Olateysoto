@@ -1,19 +1,49 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllPostsByAuthor, formatDate } from '../../lib/blog'
+import { AVISO_PATROCINIO, waLink } from '../../lib/contacto'
 
 export const metadata: Metadata = {
-  title: 'Constanza Soto — Derecho de Familia',
+  title: 'Constanza Soto — Asesora jurídica en familia, Talca',
   description:
-    'Análisis jurídico, sentencias y reflexiones sobre derecho de familia por Constanza Soto, asesora jurídica en Talca.',
+    'Constanza Soto, asesora jurídica en derecho de familia en Talca: divorcio, pensión de alimentos, cuidado personal y filiación. Artículos y análisis de jurisprudencia.',
 }
 
 export default function ConstanzaSotoPage() {
   const posts = getAllPostsByAuthor('constanza_soto')
   const categorias = [...new Set(posts.map((p) => p.categoria))]
 
+  const personSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Constanza Soto',
+    alternateName: 'Constanza Soto Gutiérrez',
+    jobTitle: 'Asesora Jurídica',
+    description: 'Asesora jurídica en derecho de familia. Fundadora de Olate & Soto Asesores Jurídicos en Talca, Región del Maule.',
+    url: 'https://olateysoto.cl/constanza_soto',
+    image: 'https://olateysoto.cl/equipo/soto.png',
+    alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidad de Talca' },
+    sameAs: [
+      'https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/',
+      'https://olateysoto.cl/constanza_soto',
+    ],
+    worksFor: {
+      '@type': 'LegalService',
+      name: 'Olate & Soto Asesores Jurídicos',
+      url: 'https://olateysoto.cl',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Talca',
+      addressRegion: 'Región del Maule',
+      addressCountry: 'CL',
+    },
+    knowsAbout: ['Derecho de Familia', 'Derecho de Infancia', 'Filiación', 'Derecho Sucesorio', 'Teoría del Derecho'],
+  }
+
   return (
     <main className="min-h-screen bg-[#F8F9FA]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
 
       {/* Hero */}
       <section className="border-b border-primary/10 bg-white px-6 py-16">
@@ -31,6 +61,25 @@ export default function ConstanzaSotoPage() {
             Creo que el derecho bien ejercido puede ser una herramienta de estabilidad y protección
             para quienes más lo necesitan.
           </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href={waLink('constanza', 'Hola Constanza, necesito orientación en un tema de familia.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary px-6 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-accent hover:text-primary"
+            >
+              Consultar por WhatsApp
+            </a>
+            <a
+              href="https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs uppercase tracking-[0.18em] text-neutral-gray hover:text-accent"
+            >
+              LinkedIn →
+            </a>
+          </div>
+          <p className="mt-4 text-xs text-neutral-gray">{AVISO_PATROCINIO}</p>
           {categorias.length > 0 && (
             <div className="mt-6 flex flex-wrap gap-3">
               {categorias.map((cat) => (

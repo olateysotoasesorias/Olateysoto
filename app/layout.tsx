@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import WhatsAppButton from '../components/WhatsAppButton'
+import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -20,23 +21,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Olate & Soto — Asesores Jurídicos Talca',
+    default: 'Olate & Soto — Asesoría jurídica en Talca | Johnny Olate · Constanza Soto',
     template: '%s — Olate & Soto',
   },
-  description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa. Rigor técnico y cercanía para personas y empresas del Maule.',
+  description: 'Asesoría jurídica en Talca y el Maule con Johnny Olate y Constanza Soto: herencias, pensión de alimentos, divorcio, accidentes y daños, cobranzas y empresas. Primera consulta gratuita.',
   metadataBase: new URL('https://olateysoto.cl'),
   openGraph: {
     siteName: 'Olate & Soto',
     locale: 'es_CL',
     type: 'website',
-    title: 'Olate & Soto — Asesores Jurídicos Talca',
-    description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa. Rigor técnico y cercanía para personas y empresas del Maule.',
+    title: 'Olate & Soto — Asesoría jurídica en Talca | Johnny Olate · Constanza Soto',
+    description: 'Asesoría jurídica en Talca y el Maule con Johnny Olate y Constanza Soto: herencias, pensión de alimentos, divorcio, accidentes y daños, cobranzas y empresas. Primera consulta gratuita.',
     url: 'https://olateysoto.cl',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Olate & Soto — Asesores Jurídicos Talca',
-    description: 'Estudio jurídico en Talca especializado en litigación civil, derecho de familia y asesoría corporativa.',
+    title: 'Olate & Soto — Asesoría jurídica en Talca | Johnny Olate · Constanza Soto',
+    description: 'Asesoría jurídica en Talca con Johnny Olate y Constanza Soto. Primera consulta gratuita.',
   },
 }
 
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Navbar />
         {children}
         <WhatsAppButton />
+        <Analytics />
       </body>
     </html>
   )

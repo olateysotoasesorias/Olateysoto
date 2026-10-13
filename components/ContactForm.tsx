@@ -27,12 +27,12 @@ export default function ContactForm() {
       <div className="flex flex-col items-start gap-4 py-6">
         <div className="h-0.5 w-12 bg-[#B5A05F]" />
         <p className="font-heading text-2xl font-semibold text-[#192A4D] leading-snug">
-          Pronto nos pondremos en contacto<br />contigo para ayudarte.
+          Recibimos su mensaje.<br />Le respondemos el mismo día hábil.
         </p>
-        <p className="text-sm text-gray-400 uppercase tracking-[0.2em]">Olate & Soto · Talca</p>
+        <p className="text-sm text-gray-600">Olate & Soto · Talca</p>
         <button
           onClick={() => setStatus('idle')}
-          className="mt-2 text-xs uppercase tracking-[0.25em] text-[#B5A05F] hover:underline underline-offset-4"
+          className="mt-2 text-sm text-[#776532] hover:underline underline-offset-4"
         >
           Enviar otra consulta
         </button>
@@ -43,50 +43,36 @@ export default function ContactForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2">
       <label className="block">
-        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Nombre completo</span>
+        <span className="text-sm text-[#192A4D]/80">Nombre</span>
         <input
           name="name"
           type="text"
+          autoComplete="name"
           placeholder="Sofía Pérez"
           required
-          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none focus:border-[#B5A05F] transition-colors"
+          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-base text-[#192A4D] placeholder-[#192A4D]/50 outline-none focus:border-[#B5A05F] transition-colors"
         />
       </label>
 
       <label className="block">
-        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Correo electrónico</span>
+        <span className="text-sm text-[#192A4D]/80">WhatsApp o correo</span>
         <input
-          name="email"
-          type="email"
-          placeholder="correo@ejemplo.com"
+          name="contacto"
+          type="text"
+          placeholder="+56 9 1234 5678 o correo@ejemplo.com"
           required
-          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none focus:border-[#B5A05F] transition-colors"
+          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-base text-[#192A4D] placeholder-[#192A4D]/50 outline-none focus:border-[#B5A05F] transition-colors"
         />
       </label>
 
       <label className="block sm:col-span-2">
-        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Número de contacto</span>
-        <div className="mt-2 flex items-end border-b border-[#192A4D]/20 focus-within:border-[#B5A05F] transition-colors">
-          <span className="pb-3 pr-2 text-sm text-[#192A4D]/60 select-none">+569</span>
-          <input
-            name="phone"
-            type="tel"
-            placeholder="XXXX XXXX"
-            maxLength={8}
-            onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 8) }}
-            className="flex-1 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none"
-          />
-        </div>
-      </label>
-
-      <label className="block sm:col-span-2">
-        <span className="text-xs uppercase tracking-[0.15em] text-[#192A4D]/80">Mensaje</span>
+        <span className="text-sm text-[#192A4D]/80">¿En qué podemos ayudarle?</span>
         <textarea
           name="message"
           rows={4}
-          placeholder="Cuéntanos brevemente tu caso..."
+          placeholder="Cuéntenos brevemente su caso"
           required
-          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-sm text-[#192A4D] placeholder-[#192A4D]/40 outline-none focus:border-[#B5A05F] transition-colors resize-none"
+          className="mt-2 w-full border-b border-[#192A4D]/20 bg-transparent py-3 text-base text-[#192A4D] placeholder-[#192A4D]/50 outline-none focus:border-[#B5A05F] transition-colors resize-none"
         />
       </label>
 
@@ -94,13 +80,13 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === 'sending'}
-          className="w-fit border border-[#B5A05F] px-10 py-3 text-xs uppercase tracking-[0.25em] text-[#B5A05F] hover:bg-[#B5A05F] hover:text-[#192A4D] transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-fit border border-[#192A4D] px-8 py-3 text-sm font-medium text-[#192A4D] hover:bg-[#192A4D] hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {status === 'sending' ? 'Enviando...' : 'Solicitar evaluación'}
+          {status === 'sending' ? 'Enviando...' : 'Solicitar consulta gratuita'}
         </button>
 
         {status === 'error' && (
-          <p className="text-sm text-red-400">{errorMsg}</p>
+          <p className="text-sm text-red-700">{errorMsg}</p>
         )}
       </div>
     </form>

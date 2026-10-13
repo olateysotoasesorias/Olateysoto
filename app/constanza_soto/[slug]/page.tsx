@@ -100,7 +100,7 @@ export default async function ArticlePage({ params }: Props) {
         </div>
 
         <CommentsSection slug={post.slug} />
-        <DebateSection titulo={post.title} />
+        <DebateSection titulo={post.title} autor="constanza" />
 
         {/* Volver */}
         <div className="mt-16 border-t border-primary/10 pt-8">

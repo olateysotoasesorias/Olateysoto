@@ -11,3 +11,7 @@ pnpm-debug.log*
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Documentos internos (el repo es público)
+docs/
+tsconfig.tsbuildinfo
