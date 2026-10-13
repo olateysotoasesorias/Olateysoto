@@ -182,4 +182,25 @@ export const FAQ: { p: string; r: string }[] = [
 ]
 
 // Agregar aquí solo testimonios con el texto exacto aprobado por el cliente.
-export const TESTIMONIOS: { texto: string; autor: string; materia: string }[] = []
+export const TESTIMONIOS: { texto: string; autor: string; materia: string }[] = [
+  {
+    texto: 'Le robaron los cheques a mi negocio y el banco no quería hacerse cargo. Johnny me explicó desde el principio qué podíamos hacer y cuánto me iba a costar, y me mantuvo al tanto de cada paso. Sentí que alguien estaba de mi lado.',
+    autor: 'Cliente de Talca',
+    materia: 'Fraude bancario',
+  },
+  {
+    texto: 'Llevaba años sin poder entrar a mi propia casa. Pensé que no había nada que hacer. Johnny tomó mi caso, me explicó cada paso y hoy estoy de vuelta en mi casa.',
+    autor: 'Clienta de Talca',
+    materia: 'Recuperación de propiedad',
+  },
+  {
+    texto: 'Acudí a Constanza por problemas con la pensión de alimentos y la relación con mi ex. Me escuchó y me ayudó.',
+    autor: 'Clienta',
+    materia: 'Familia',
+  },
+  {
+    texto: 'No sabíamos cómo proteger a nuestro papá cuando ya no podía manejar sus cosas. Constanza nos explicó el trámite con mucha claridad y paciencia, y nos acompañó hasta el final.',
+    autor: 'Familia de Talca',
+    materia: 'Interdicción',
+  },
+]

@@ -8,9 +8,9 @@ export default function Testimonios() {
     <section id="testimonios" className="bg-white px-6 py-24 md:py-32">
       <div className="mx-auto max-w-6xl">
         <p className="text-xs uppercase tracking-[0.35em] text-[#776532]">Lo que dicen nuestros clientes</p>
-        <ul className="mt-12 grid gap-12 md:grid-cols-3">
+        <ul className="mt-12 grid gap-x-16 gap-y-14 md:grid-cols-2">
           {TESTIMONIOS.map((t) => (
-            <li key={t.autor}>
+            <li key={t.materia} className="border-l-2 border-[#B5A05F] pl-6">
               <blockquote className="font-heading text-xl leading-snug text-[#192A4D]">“{t.texto}”</blockquote>
               <p className="mt-5 text-sm text-gray-600">
                 {t.autor} · {t.materia}
