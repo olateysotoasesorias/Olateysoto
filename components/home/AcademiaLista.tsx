@@ -22,7 +22,7 @@ export default function AcademiaLista() {
               <a href={`${post.autorPath}/${post.slug}`} className="group grid gap-2 py-8 md:grid-cols-[14rem_1fr] md:gap-10">
                 <p className="text-sm text-[#192A4D]/70">
                   {post.autor}
-                  <span className="block text-[#192A4D]/60">{formatDate(post.date)}</span>
+                  <span className="block text-[#192A4D]/70">{formatDate(post.date)}</span>
                 </p>
                 <div>
                   <h3 className="font-heading text-xl font-semibold leading-snug text-[#192A4D] group-hover:text-[#776532]">

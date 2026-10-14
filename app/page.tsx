@@ -8,7 +8,6 @@ import Garantias from '../components/home/Garantias'
 import AcademiaLista from '../components/home/AcademiaLista'
 import Faq from '../components/home/Faq'
 import Contacto from '../components/home/Contacto'
-import Footer from '../components/home/Footer'
 import { AVISO_PATROCINIO } from '../lib/contacto'
 import { EQUIPO } from '../lib/equipo'
 
@@ -51,7 +50,6 @@ export default function HomePage() {
       <AcademiaLista />
       <Faq />
       <Contacto />
-      <Footer />
     </main>
   )
 }

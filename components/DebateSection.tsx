@@ -13,27 +13,27 @@ export default function DebateSection({ titulo, autor }: { titulo: string; autor
   return (
     <section className="mt-16 border-t border-primary/10 pt-10">
       <div className="bg-[#f7f6f3] p-8">
-        <p className="mb-3 text-xs uppercase tracking-[0.3em] text-accent">Debate</p>
+        <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[#776532]">Debate</p>
         <h2 className="font-heading text-xl font-semibold text-primary">
-          ¿Tienes perspectivas sobre este tema?
+          ¿Tiene una perspectiva sobre este tema?
         </h2>
-        <p className="mt-3 max-w-lg text-sm leading-6 text-neutral-gray">
-          El derecho se construye en la conversación. Si este artículo generó preguntas,
-          discrepancias o reflexiones, escríbenos directamente.
+        <p className="mt-3 max-w-lg text-sm leading-6 text-gray-600">
+          El derecho se construye en la conversación. Si este artículo le generó preguntas,
+          discrepancias o reflexiones, escríbanos directamente.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a
             href={wa}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-accent hover:text-primary"
+            className="inline-flex items-center gap-2 border border-primary px-5 py-2.5 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
           >
             <WaIcon />
             Debatir por WhatsApp
           </a>
           <a
             href={mail}
-            className="inline-flex items-center gap-2 border border-primary/20 px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-primary/60 transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 px-5 py-2.5 text-sm text-primary/70 underline decoration-[#B5A05F] underline-offset-4 transition-colors hover:text-primary"
           >
             Escribir por correo
           </a>

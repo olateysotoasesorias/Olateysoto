@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import { Inter, Playfair_Display } from 'next/font/google'
 import Navbar from '../components/Navbar'
 import WhatsAppButton from '../components/WhatsAppButton'
+import Footer from '../components/home/Footer'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -33,11 +34,13 @@ export const metadata: Metadata = {
     title: 'Olate & Soto — Asesoría jurídica en Talca | Johnny Olate · Constanza Soto',
     description: 'Asesoría jurídica en Talca y el Maule con Johnny Olate y Constanza Soto: herencias, pensión de alimentos, divorcio, accidentes y daños, cobranzas y empresas. Primera consulta gratuita.',
     url: 'https://olateysoto.cl',
+    images: [{ url: '/og/home.png', width: 1200, height: 630, alt: 'Olate & Soto: asesoría jurídica en Talca' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Olate & Soto — Asesoría jurídica en Talca | Johnny Olate · Constanza Soto',
     description: 'Asesoría jurídica en Talca con Johnny Olate y Constanza Soto. Primera consulta gratuita.',
+    images: ['/og/home.png'],
   },
 }
 
@@ -47,6 +50,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-background-white text-neutral-gray antialiased">
         <Navbar />
         {children}
+        <Footer />
         <WhatsAppButton />
         <Analytics />
       </body>

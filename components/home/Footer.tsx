@@ -32,7 +32,10 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-14 flex max-w-6xl items-center justify-between border-t border-white/10 pt-6">
-        <p className="text-xs text-white/60">© {new Date().getFullYear()} Olate & Soto Asesores Jurídicos</p>
+        <p className="text-xs text-white/60">
+          © {new Date().getFullYear()} Olate & Soto Asesores Jurídicos ·{' '}
+          <a href="/privacidad" className="underline underline-offset-4 hover:text-[#B5A05F]">Política de privacidad</a>
+        </p>
         {/* Enlace de acceso al panel — invisible */}
         <a href="/admin" className="text-[#192A4D] text-[1px] select-none" tabIndex={-1} aria-hidden="true">·</a>
       </div>

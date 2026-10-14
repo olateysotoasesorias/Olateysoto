@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   description:
     'Constanza Soto, egresada de Derecho (U. de Talca), asesora jurídica en Talca: pensión de alimentos, divorcio, cuidado personal, violencia intrafamiliar, interdicción y protección del adulto mayor. Primera consulta gratuita.',
   alternates: { canonical: 'https://olateysoto.cl/constanza_soto' },
+  openGraph: {
+    title: 'Constanza Soto — Asesora jurídica en Talca: pensión de alimentos, divorcio y familia',
+    description: 'Constanza Soto, egresada de Derecho (U. de Talca), asesora jurídica en Talca: pensión de alimentos, divorcio, cuidado personal, violencia intrafamiliar, interdicción y protección del adulto mayor. Primera consulta gratuita.',
+    siteName: 'Olate & Soto',
+    locale: 'es_CL',
+    url: 'https://olateysoto.cl/constanza_soto',
+    type: 'profile',
+    images: [{ url: '/og/constanza.png', width: 1200, height: 630 }],
+  },
 }
 
 export default function Page() {

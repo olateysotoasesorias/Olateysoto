@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import Footer from '../../../components/home/Footer'
 import { AVISO_PATROCINIO, waLink } from '../../../lib/contacto'
 import { CASOS, EQUIPO, TESTIMONIOS } from '../../../lib/equipo'
 import { LANDINGS, landingPorSlug } from '../../../lib/landings'
@@ -19,7 +18,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: { absolute: `${l.seoTitle} | Olate & Soto` },
     description: l.metaDesc,
     alternates: { canonical: `${BASE}/asesoria/${l.slug}` },
-    openGraph: { title: l.seoTitle, description: l.metaDesc, url: `${BASE}/asesoria/${l.slug}`, type: 'article' },
+    openGraph: {
+      title: l.seoTitle,
+      description: l.metaDesc,
+      url: `${BASE}/asesoria/${l.slug}`,
+      type: 'article',
+      siteName: 'Olate & Soto',
+      locale: 'es_CL',
+      images: [{ url: `/og/${l.slug}.png`, width: 1200, height: 630 }],
+    },
   }
 }
 
@@ -233,8 +240,6 @@ export default function LandingPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
-
-      <Footer />
     </main>
   )
 }

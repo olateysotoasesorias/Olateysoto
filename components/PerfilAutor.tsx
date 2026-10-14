@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import type { ReactNode } from 'react'
-import Footer from './home/Footer'
 import { AVISO_PATROCINIO, waLink } from '../lib/contacto'
 import { ASESORIAS, CASOS, TESTIMONIOS, type Persona } from '../lib/equipo'
 import { formatDate, type Post } from '../lib/blog'
@@ -139,8 +138,6 @@ export default function PerfilAutor({ p, posts, extra }: { p: Persona; posts: Po
           </a>
         </div>
       </section>
-
-      <Footer />
     </main>
   )
 }

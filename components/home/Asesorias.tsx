@@ -12,15 +12,15 @@ export default function Asesorias() {
           En qué podemos ayudarle.
         </h2>
 
-        <ul className="mt-16 grid border-t border-[#192A4D]/10 md:grid-cols-2 md:gap-x-16">
+        <ul className="mt-10 grid border-t md:mt-16 border-[#192A4D]/10 md:grid-cols-2 md:gap-x-16">
           {ASESORIAS.map((a) => {
             const unico = a.responsables.length === 1 ? a.responsables[0] : null
             return (
-              <li key={a.titulo} className="border-b border-[#192A4D]/10 py-8">
+              <li key={a.titulo} className="border-b border-[#192A4D]/10 py-5 md:py-8">
                 <h3 className="font-heading text-xl font-semibold text-[#192A4D]">
                   {a.guia ? <a href={a.guia} className="hover:text-[#776532]">{a.titulo}</a> : a.titulo}
                 </h3>
-                <p className="mt-2 text-base leading-7 text-gray-600">{a.desc}</p>
+                <p className="mt-2 line-clamp-2 text-base leading-7 text-gray-600 md:line-clamp-none">{a.desc}</p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
                   <span className="text-[#192A4D]/70">
                     Lo atiende {a.responsables.map(nombreDe).join(' o ')}

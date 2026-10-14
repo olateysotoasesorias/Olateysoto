@@ -85,6 +85,11 @@ export default function ContactForm() {
           {status === 'sending' ? 'Enviando...' : 'Solicitar consulta gratuita'}
         </button>
 
+        <p className="text-xs leading-5 text-gray-600">
+          Al enviar, acepta que usemos sus datos para responderle. Más información en nuestra{' '}
+          <a href="/privacidad" className="underline decoration-[#B5A05F] underline-offset-4">política de privacidad</a>.
+        </p>
+
         {status === 'error' && (
           <p className="text-sm text-red-700">{errorMsg}</p>
         )}

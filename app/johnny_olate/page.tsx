@@ -8,6 +8,15 @@ export const metadata: Metadata = {
   description:
     'Johnny Olate, licenciado en Ciencias Jurídicas y Sociales (U. de Talca), asesor jurídico en Talca: fraude bancario, accidentes y daños, casas ocupadas, herencias, cobranzas y empresas. Fundador de El Criterio. Primera consulta gratuita.',
   alternates: { canonical: 'https://olateysoto.cl/johnny_olate' },
+  openGraph: {
+    title: 'Johnny Olate — Asesor jurídico en Talca: fraude bancario, propiedades, herencias y deudas',
+    description: 'Johnny Olate, licenciado en Ciencias Jurídicas y Sociales (U. de Talca), asesor jurídico en Talca: fraude bancario, accidentes y daños, casas ocupadas, herencias, cobranzas y empresas. Fundador de El Criterio. Primera consulta gratuita.',
+    siteName: 'Olate & Soto',
+    locale: 'es_CL',
+    url: 'https://olateysoto.cl/johnny_olate',
+    type: 'profile',
+    images: [{ url: '/og/johnny.png', width: 1200, height: 630 }],
+  },
 }
 
 export default function Page() {
