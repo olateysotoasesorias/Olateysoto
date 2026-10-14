@@ -15,7 +15,7 @@ const SECCIONES: { h: string; p: string[] }[] = [
     h: 'Qué datos recogemos',
     p: [
       'Cuando usted nos escribe por el formulario, recogemos su nombre, su WhatsApp o correo electrónico, y el mensaje que nos envía. Cuando nos escribe por WhatsApp, recibimos su número y el contenido de la conversación.',
-      'Usamos una herramienta de estadísticas de visitas (Vercel Web Analytics) que mide cuántas personas visitan cada página, sin cookies y sin identificar a nadie.',
+      'Medimos las visitas al sitio con dos herramientas. Vercel Web Analytics cuenta cuántas personas visitan cada página, sin cookies. Google Analytics usa cookies para distinguir visitas, saber qué páginas se leen y cuántas personas hacen clic en WhatsApp, teléfono o correo, o envían el formulario. No recoge su nombre ni el contenido de sus mensajes, y no la usamos para publicidad personalizada.',
     ],
   },
   {
@@ -32,7 +32,7 @@ const SECCIONES: { h: string; p: string[] }[] = [
   {
     h: 'Quién más los recibe',
     p: [
-      'Para funcionar, usamos servicios de terceros: Google (correo electrónico), Meta (WhatsApp) y Vercel (alojamiento del sitio). Esos proveedores pueden almacenar datos fuera de Chile.',
+      'Para funcionar, usamos servicios de terceros: Google (correo electrónico y estadísticas de visitas), Meta (WhatsApp) y Vercel (alojamiento y estadísticas del sitio). Esos proveedores pueden almacenar datos fuera de Chile.',
       'Si su caso lo requiere, compartiremos la información necesaria con la abogada habilitada que patrocina las causas judiciales, solo para tramitar su caso.',
     ],
   },
@@ -50,6 +50,10 @@ const SECCIONES: { h: string; p: string[] }[] = [
       'Usted puede pedirnos acceso a sus datos, su rectificación, su supresión, oponerse a su tratamiento, su portabilidad y el bloqueo temporal, conforme a la Ley N° 19.628 y a la Ley N° 21.719 sobre protección de datos personales, una vez que esta entre en vigencia.',
       'Para ejercer estos derechos, escríbanos a olateysotoasesorias@gmail.com indicando su nombre y qué solicita. Le responderemos dentro de los plazos legales.',
     ],
+  },
+  {
+    h: 'Cookies',
+    p: ['Solo usamos las cookies de Google Analytics descritas arriba. Si prefiere no ser medido, puede bloquear las cookies en su navegador o instalar el complemento oficial de inhabilitación de Google Analytics.'],
   },
   {
     h: 'Cambios',

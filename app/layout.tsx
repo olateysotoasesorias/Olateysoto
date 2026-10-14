@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import WhatsAppButton from '../components/WhatsAppButton'
 import Footer from '../components/home/Footer'
 import { Analytics } from '@vercel/analytics/next'
+import GoogleAnalytics from '../components/GoogleAnalytics'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Footer />
         <WhatsAppButton />
         <Analytics />
+        <GoogleAnalytics />
       </body>
     </html>
   )

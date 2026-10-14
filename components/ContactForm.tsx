@@ -14,6 +14,7 @@ export default function ContactForm() {
     const formData = new FormData(e.currentTarget)
     const result = await sendContactEmail(formData)
     if (result.ok) {
+      window.gtag?.('event', 'generate_lead', { pagina: window.location.pathname, origen: 'formulario' })
       setStatus('ok')
       formRef.current?.reset()
     } else {
