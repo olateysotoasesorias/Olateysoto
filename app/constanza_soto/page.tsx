@@ -22,7 +22,7 @@ export default function Page() {
     jobTitle: 'Asesora Jurídica',
     description: 'Asesora jurídica en derecho de familia. Fundadora de Olate & Soto Asesores Jurídicos en Talca, Región del Maule.',
     url: 'https://olateysoto.cl/constanza_soto',
-    image: 'https://olateysoto.cl/equipo/soto.png',
+    image: 'https://olateysoto.cl/equipo/constanza.png',
     alumniOf: { '@type': 'CollegeOrUniversity', name: 'Universidad de Talca' },
     sameAs: [
       'https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/',

@@ -29,7 +29,7 @@ const ACADEMIAS = [
     href: '/constanza_soto',
     nombre: 'Constanza Soto',
     iniciales: 'CS',
-    foto: '/equipo/soto.png',
+    foto: '/equipo/constanza.png',
     fotoPos: 'object-top',
     desc: 'Derecho de familia, interés superior del niño, mediación familiar y análisis de sentencias en materia de familia.',
     linkedin: 'https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/',

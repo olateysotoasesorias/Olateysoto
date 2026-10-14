@@ -48,7 +48,7 @@ export const EQUIPO: Persona[] = [
       'En Olate & Soto atiende pensiones de alimentos, divorcios y cuidado personal, violencia intrafamiliar, interdicciones y la protección de adultos mayores y personas vulnerables.',
       'Su forma de trabajar parte por escuchar: que cada persona entienda su situación y sus opciones antes de decidir, con el interés de los niños en el centro.',
     ],
-    retrato: '/equipo/soto.png',
+    retrato: '/equipo/constanza.png',
     perfil: '/constanza_soto',
     linkedin: 'https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/',
     mensaje: 'Hola Constanza, necesito orientación sobre un tema de familia.',
