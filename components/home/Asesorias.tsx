@@ -17,7 +17,9 @@ export default function Asesorias() {
             const unico = a.responsables.length === 1 ? a.responsables[0] : null
             return (
               <li key={a.titulo} className="border-b border-[#192A4D]/10 py-8">
-                <h3 className="font-heading text-xl font-semibold text-[#192A4D]">{a.titulo}</h3>
+                <h3 className="font-heading text-xl font-semibold text-[#192A4D]">
+                  {a.guia ? <a href={a.guia} className="hover:text-[#776532]">{a.titulo}</a> : a.titulo}
+                </h3>
                 <p className="mt-2 text-base leading-7 text-gray-600">{a.desc}</p>
                 <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
                   <span className="text-[#192A4D]/70">
@@ -44,6 +46,11 @@ export default function Asesorias() {
                         Consultar a {nombreDe(id).split(' ')[0]} →
                       </a>
                     ))
+                  )}
+                  {a.guia && (
+                    <a href={a.guia} className="text-[#192A4D]/70 underline decoration-[#192A4D]/30 underline-offset-4 hover:text-[#192A4D]">
+                      Leer la guía
+                    </a>
                   )}
                 </div>
               </li>

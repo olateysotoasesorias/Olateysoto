@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { getAllPostsByAuthor, formatDate } from '../../lib/blog'
-import { waLink } from '../../lib/contacto'
+import PerfilAutor from '../../components/PerfilAutor'
+import { getAllPostsByAuthor } from '../../lib/blog'
+import { EQUIPO } from '../../lib/equipo'
 
 export const metadata: Metadata = {
-  title: 'Johnny Olate — Derecho, Estoicismo y Filosofía',
+  title: { absolute: 'Johnny Olate — Asesor jurídico en Talca: fraude bancario, propiedades, herencias y deudas' },
   description:
-    'Reflexiones sobre estoicismo, análisis jurídico y filosofía del derecho por Johnny Olate, asesor jurídico en Talca.',
+    'Johnny Olate, licenciado en Ciencias Jurídicas y Sociales (U. de Talca), asesor jurídico en Talca: fraude bancario, accidentes y daños, casas ocupadas, herencias, cobranzas y empresas. Fundador de El Criterio. Primera consulta gratuita.',
+  alternates: { canonical: 'https://olateysoto.cl/johnny_olate' },
 }
 
-export default function JohnnyOlatePage() {
+export default function Page() {
+  const p = EQUIPO.find((x) => x.id === 'johnny')!
   const posts = getAllPostsByAuthor('johnny_olate')
-  const categorias = [...new Set(posts.map((p) => p.categoria))]
 
   const personSchema = {
     '@context': 'https://schema.org',
@@ -44,107 +45,32 @@ export default function JohnnyOlatePage() {
     knowsAbout: ['Derecho Civil', 'Derecho Sucesorio', 'Redacción jurídica', 'Filosofía del Derecho', 'Estoicismo', 'Derecho Patrimonial'],
   }
 
+
+  const extra = (
+    <section className="px-6 py-20">
+      <div className="mx-auto grid max-w-6xl gap-10 border-y border-[#192A4D]/10 py-14 md:grid-cols-2 md:gap-16">
+        <div>
+          <p className="text-xs uppercase tracking-[0.35em] text-[#776532]">El Criterio</p>
+          <p className="mt-4 text-lg leading-8 text-gray-700">
+            Johnny fundó El Criterio, un monitor diario de la jurisprudencia de la Corte Suprema. Lo que la Corte resuelve cada día llega a su trabajo.
+          </p>
+          <a href="https://elcriterio.cl" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-sm underline decoration-[#B5A05F] underline-offset-4">Conocer El Criterio →</a>
+        </div>
+        <div>
+          <p className="text-xs uppercase tracking-[0.35em] text-[#776532]">¿Es abogado o abogada?</p>
+          <p className="mt-4 text-lg leading-8 text-gray-700">
+            Redactamos escritos, recursos, minutas e informes en derecho para colegas de todo Chile. Usted patrocina y firma.
+          </p>
+          <a href="/abogados" className="mt-4 inline-block text-sm underline decoration-[#B5A05F] underline-offset-4">Redacción jurídica para abogados →</a>
+        </div>
+      </div>
+    </section>
+  )
+
   return (
-    <main className="min-h-screen bg-[#F8F9FA]">
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
-
-      {/* Hero */}
-      <section className="border-b border-primary/10 bg-white px-6 py-16">
-        <div className="mx-auto max-w-3xl">
-          <p className="mb-3 text-xs uppercase tracking-[0.32em] text-accent">Academia</p>
-          <h1 className="font-heading text-4xl font-semibold text-primary sm:text-5xl">
-            Johnny Olate
-          </h1>
-          <p className="mt-2 text-xs uppercase tracking-[0.2em] text-neutral-gray">
-            Asesor Jurídico · Talca, Región del Maule
-          </p>
-          <p className="mt-6 max-w-xl text-base leading-7 text-neutral-gray">
-            Escribo sobre estoicismo, análisis jurídico y filosofía del derecho. Creo que las ideas
-            antiguas tienen respuestas a los problemas modernos, y que el derecho bien entendido
-            es una forma de filosofía aplicada.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <a
-              href="/#abogados"
-              className="inline-block bg-primary px-6 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-white transition-colors hover:bg-accent hover:text-primary"
-            >
-              Redacción para abogados
-            </a>
-            <a
-              href={waLink('johnny', 'Hola Johnny, necesito orientación en un tema civil.')}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border border-primary/20 px-6 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-primary transition-colors hover:border-accent hover:text-accent"
-            >
-              Consultar por WhatsApp
-            </a>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3">
-            {categorias.map((cat) => (
-              <Link
-                key={cat}
-                href={`/academia?cat=${encodeURIComponent(cat)}&autor=johnny_olate`}
-                className="border border-primary/20 px-4 py-1 text-xs font-medium uppercase tracking-[0.18em] text-primary transition-colors hover:border-accent hover:text-accent"
-              >
-                {cat}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Artículos */}
-      <section className="px-6 py-12">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-1 font-heading text-xl font-semibold text-primary">Artículos</h2>
-          <div className="mb-8 h-0.5 w-12 bg-accent" />
-
-          <ul className="divide-y divide-primary/8">
-            {posts.map((post) => (
-              <li key={post.slug}>
-                <Link
-                  href={`/johnny_olate/${post.slug}`}
-                  className="group block py-8 transition-opacity hover:opacity-75"
-                >
-                  <div className="mb-2 flex items-center gap-3">
-                    <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
-                      {post.categoria}
-                    </span>
-                    <span className="text-neutral-gray/40">·</span>
-                    <time className="font-sans text-xs text-neutral-gray/70">
-                      {formatDate(post.date)}
-                    </time>
-                  </div>
-                  <h3 className="font-heading text-xl font-semibold leading-snug text-primary group-hover:text-primary/80">
-                    {post.title}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-sm leading-6 text-neutral-gray">
-                    {post.description}
-                  </p>
-                  <span className="mt-3 inline-block text-xs font-medium uppercase tracking-[0.18em] text-accent">
-                    Leer artículo →
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      {/* Footer mini */}
-      <footer className="border-t border-primary/10 bg-white px-6 py-8 text-center">
-        <p className="text-xs text-neutral-gray/60">
-          Johnny Olate ·{' '}
-          <Link href="/academia" className="text-accent hover:underline">
-            Academia Olate &amp; Soto
-          </Link>
-          {' '}·{' '}
-          <Link href="/" className="text-accent hover:underline">
-            Olate &amp; Soto Asesores Jurídicos
-          </Link>
-        </p>
-      </footer>
-
-    </main>
+      <PerfilAutor p={p} posts={posts} extra={extra} />
+    </>
   )
 }

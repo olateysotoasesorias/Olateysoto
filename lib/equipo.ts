@@ -9,6 +9,7 @@ export type Persona = {
   credencial: string
   atiende: string[]
   bio: string
+  bioLarga: string[]
   retrato: string
   perfil: string
   linkedin: string
@@ -24,6 +25,11 @@ export const EQUIPO: Persona[] = [
     credencial: 'Licenciado en Ciencias Jurídicas y Sociales, Universidad de Talca. Inició sus estudios en la Pontificia Universidad Católica de Chile.',
     atiende: ['Fraude bancario y cobros no reconocidos', 'Accidentes de tránsito, negligencia médica y daños', 'Casas ocupadas y arriendos impagos', 'Herencias y posesiones efectivas', 'Cobranza, juicio ejecutivo y prescripción de deudas', 'Sociedades, contratos y registro de marcas'],
     bio: 'Fue pasante en la Ilustrísima Corte de Apelaciones de Talca y fundó El Criterio, un monitor diario de la jurisprudencia de la Corte Suprema. Revisa cada caso contra la norma y los fallos vigentes.',
+    bioLarga: [
+      'Fue ayudante de cátedra y pasante en la Ilustrísima Corte de Apelaciones de Talca.',
+      'Fundó El Criterio, un monitor diario de la jurisprudencia de la Corte Suprema que siguen abogados de distintas regiones. Esa herramienta respalda su trabajo: cada caso se revisa contra la norma y los fallos vigentes.',
+      'En Olate & Soto atiende fraudes bancarios, accidentes y daños, recuperación de propiedades, herencias, cobranzas y prescripción de deudas, y asesora a empresas en sociedades, contratos y registro de marcas.',
+    ],
     retrato: '/equipo/olate.jpg',
     perfil: '/johnny_olate',
     linkedin: 'https://www.linkedin.com/in/johnny-olate-rojas-b16313237/',
@@ -37,6 +43,11 @@ export const EQUIPO: Persona[] = [
     credencial: 'Egresada de Derecho, Universidad de Talca.',
     atiende: ['Pensión de alimentos', 'Divorcio y cuidado personal', 'Violencia intrafamiliar y medidas de protección', 'Interdicción y protección del adulto mayor y personas vulnerables', 'Herencias y posesiones efectivas'],
     bio: 'Fue ayudante de cátedra en Derecho de Familia y Teoría del Derecho. Acompaña a cada familia para que entienda su situación y sus opciones antes de decidir, con el interés de los niños en el centro.',
+    bioLarga: [
+      'Fue ayudante de cátedra en diversas asignaturas, con especial dedicación al Derecho de Familia y la Teoría del Derecho.',
+      'En Olate & Soto atiende pensiones de alimentos, divorcios y cuidado personal, violencia intrafamiliar, interdicciones y la protección de adultos mayores y personas vulnerables.',
+      'Su forma de trabajar parte por escuchar: que cada persona entienda su situación y sus opciones antes de decidir, con el interés de los niños en el centro.',
+    ],
     retrato: '/equipo/soto.png',
     perfil: '/constanza_soto',
     linkedin: 'https://www.linkedin.com/in/constanza-soto-guti%C3%A9rrez-/',
@@ -49,11 +60,13 @@ export type Asesoria = {
   desc: string
   responsables: Fundador[]
   mensaje: string
+  guia?: string
 }
 
 export const ASESORIAS: Asesoria[] = [
   {
     titulo: 'Fraude bancario y cobros no reconocidos',
+    guia: '/asesoria/fraude-bancario-talca',
     desc: 'Tarjetas clonadas, transferencias o cheques que usted no hizo y que el banco no le devuelve.',
     responsables: ['johnny'],
     mensaje: 'Hola Johnny, tengo un problema de fraude bancario o cobros que no reconozco.',
@@ -66,6 +79,7 @@ export const ASESORIAS: Asesoria[] = [
   },
   {
     titulo: 'Casa ocupada o arrendatario que no paga',
+    guia: '/asesoria/recuperar-casa-ocupada-talca',
     desc: 'Recuperamos su propiedad: desalojo de ocupantes y restitución cuando el arrendatario no paga.',
     responsables: ['johnny'],
     mensaje: 'Hola Johnny, necesito recuperar una propiedad (ocupada o con arriendo impago).',
@@ -78,6 +92,7 @@ export const ASESORIAS: Asesoria[] = [
   },
   {
     titulo: 'Pensión de alimentos',
+    guia: '/asesoria/pension-alimentos-talca',
     desc: 'Demanda, aumento, rebaja o cobro de una pensión de alimentos impaga.',
     responsables: ['constanza'],
     mensaje: 'Hola Constanza, quiero consultar por una pensión de alimentos.',
@@ -121,34 +136,40 @@ export const ASESORIAS: Asesoria[] = [
 ]
 
 // Casos reales anonimizados: sin rol, carátula ni datos que identifiquen a las personas.
-export const CASOS: { materia: string; situacion: string; resultado: string }[] = [
+export const CASOS: { materia: string; situacion: string; resultado: string; autor: Fundador }[] = [
   {
     materia: 'Fraude bancario',
+    autor: 'johnny',
     situacion: 'A nuestro cliente le robaron cheques y el banco se negó a responder por los cobros que él no había hecho.',
-    resultado: 'Demandamos ante el Juzgado de Policía Local de Talca. En primera instancia, el banco fue condenado a indemnizarlo y a pagar una multa.',
+    resultado: 'Logramos que se aplicara la Ley de Protección al Consumidor, más favorable para él, ante el Juzgado de Policía Local de Talca. En primera instancia, el banco fue condenado a indemnizarlo y a pagar una multa.',
   },
   {
     materia: 'Casa ocupada',
+    autor: 'johnny',
     situacion: 'Una mujer llevaba años sin poder vivir en su casa, ocupada por personas sin ningún derecho.',
     resultado: 'Obtuvimos la orden judicial y la propiedad fue desalojada con auxilio de la fuerza pública. Hoy está de vuelta en su casa.',
   },
   {
     materia: 'Violencia intrafamiliar',
+    autor: 'constanza',
     situacion: 'Una madre necesitaba protegerse a ella y a sus hijos tras episodios de violencia.',
     resultado: 'Obtuvo medidas de resguardo, un aumento de la pensión de alimentos y límites a la relación directa y regular.',
   },
   {
     materia: 'Interdicción',
+    autor: 'constanza',
     situacion: 'Una familia necesitaba proteger a un familiar que ya no podía administrar sus bienes.',
     resultado: 'Se declaró la interdicción y se nombró a quien administra hoy sus bienes.',
   },
   {
     materia: 'Registro de marcas',
+    autor: 'johnny',
     situacion: 'Emprendedores que necesitaban proteger el nombre de su proyecto.',
     resultado: 'Registramos marcas ante INAPI, entre ellas la de El Criterio.',
   },
   {
     materia: 'Trámites civiles',
+    autor: 'johnny',
     situacion: 'Constitución de sociedades, posesiones efectivas y otros trámites del día a día.',
     resultado: 'Más de 100 causas y trámites civiles acompañados.',
   },
@@ -182,25 +203,29 @@ export const FAQ: { p: string; r: string }[] = [
 ]
 
 // Agregar aquí solo testimonios con el texto exacto aprobado por el cliente.
-export const TESTIMONIOS: { texto: string; autor: string; materia: string }[] = [
+export const TESTIMONIOS: { texto: string; autor: string; materia: string; fundador: Fundador }[] = [
   {
     texto: 'Le robaron los cheques a mi negocio y el banco no quería hacerse cargo. Johnny me explicó desde el principio qué podíamos hacer y cuánto me iba a costar, y me mantuvo al tanto de cada paso. Sentí que alguien estaba de mi lado.',
     autor: 'Cliente de Talca',
     materia: 'Fraude bancario',
+    fundador: 'johnny',
   },
   {
     texto: 'Llevaba años sin poder entrar a mi propia casa. Pensé que no había nada que hacer. Johnny tomó mi caso, me explicó cada paso y hoy estoy de vuelta en mi casa.',
     autor: 'Clienta de Talca',
     materia: 'Recuperación de propiedad',
+    fundador: 'johnny',
   },
   {
     texto: 'Acudí a Constanza por problemas con la pensión de alimentos y la relación con mi ex. Me escuchó y me ayudó.',
     autor: 'Clienta',
     materia: 'Familia',
+    fundador: 'constanza',
   },
   {
     texto: 'No sabíamos cómo proteger a nuestro papá cuando ya no podía manejar sus cosas. Constanza nos explicó el trámite con mucha claridad y paciencia, y nos acompañó hasta el final.',
     autor: 'Familia de Talca',
     materia: 'Interdicción',
+    fundador: 'constanza',
   },
 ]
